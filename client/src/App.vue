@@ -1,30 +1,58 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div class="test">
+    <h1>TEST</h1>
+    <div class="app-container">
+      <h1>Médiathèque d’inspirations visuelles</h1>
+
+      Barre de recherche / filtres
+      <SearchBar @filterChanged="updateFilters" />
+
+      <br>
+      Liste des affiches filtrée
+      <AfficheList :filters="filters" />
+
+      Formulaire d’ajout / édition
+      <AfficheForm @itemAdded="addItem" />
+    </div>
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<script>
+import SearchBar from './components/SearchBar.vue'
+import AfficheList from './components/AfficheList.vue'
+import AfficheForm from './components/AfficheForm.vue'
+
+export default {
+  name: 'App',
+  components: {
+    SearchBar,
+    AfficheList,
+    AfficheForm
+  },
+  data() {
+    return {
+      filters: {},
+      items: []
+    }
+  },
+  methods: {
+    updateFilters(newFilters) {
+      this.filters = newFilters
+    },
+    addItem(newItem) {
+      this.items.push(newItem)
+    }
+  }
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+</script>
+
+<style>
+body {
+  background-color: black;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+
+.app-container {
+  background-color: gray;
+
 }
 </style>
