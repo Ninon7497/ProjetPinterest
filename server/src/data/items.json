@@ -1,0 +1,112 @@
+[
+  {
+    "id": "itm_001",
+    "title": "Affiche Bauhaus 1923",
+    "author": "Herbert Bayer",
+    "tags": ["affiche", "bauhaus", "design graphique"],
+    "colors": ["#f94144", "#f9c74f", "#277da1"],
+    "sourceUrl": "https://www.moma.org/collection/works/79870",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Bauhaus_Ausstellung_1923_poster.png",
+    "createdAt": "2025-01-02T09:30:00.000Z",
+    "updatedAt": "2025-01-02T09:30:00.000Z"
+  },
+  {
+    "id": "itm_002",
+    "title": "Couverture Vogue – Juin 1950",
+    "author": "Erwin Blumenfeld",
+    "tags": ["photographie", "mode", "couverture"],
+    "colors": ["#22223b", "#f2e9e4", "#c9ada7"],
+    "sourceUrl": "https://www.vogue.com/article/erwin-blumenfeld-1950-cover",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Vogue_cover_1950.jpg",
+    "createdAt": "2025-01-03T11:00:00.000Z",
+    "updatedAt": "2025-01-03T11:00:00.000Z"
+  },
+  {
+    "id": "itm_003",
+    "title": "Affiche de film Metropolis",
+    "author": "Heinz Schulz-Neudamm",
+    "tags": ["cinéma", "science-fiction", "affiche"],
+    "colors": ["#dda15e", "#bc6c25", "#283618"],
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Metropolis_(film,_1927)",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Metropolisposter.jpg",
+    "createdAt": "2025-01-04T14:15:00.000Z",
+    "updatedAt": "2025-01-04T14:15:00.000Z"
+  },
+  {
+    "id": "itm_004",
+    "title": "Identité visuelle – Tokyo 2020",
+    "author": "Asao Tokolo",
+    "tags": ["identité", "jeux olympiques", "logo"],
+    "colors": ["#0a0a0a", "#1d3557", "#f1faee"],
+    "sourceUrl": "https://olympics.com/en/olympic-games/tokyo-2020",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/36/2020_Summer_Olympics_logo.svg",
+    "createdAt": "2025-01-05T08:20:00.000Z",
+    "updatedAt": "2025-01-05T08:20:00.000Z"
+  },
+  {
+    "id": "itm_005",
+    "title": "Couverture The New Yorker – Avril 2022",
+    "author": "Adrian Tomine",
+    "tags": ["illustration", "magazine", "couverture"],
+    "colors": ["#264653", "#2a9d8f", "#e9c46a"],
+    "sourceUrl": "https://www.newyorker.com/",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/a/a1/The_New_Yorker_April_2022_cover.jpg",
+    "createdAt": "2025-01-06T17:45:00.000Z",
+    "updatedAt": "2025-01-06T17:45:00.000Z"
+  },
+  {
+    "id": "itm_006",
+    "title": "Affiche de concert – Daft Punk Alive 2007",
+    "author": "So Me",
+    "tags": ["musique", "affiche", "électronique"],
+    "colors": ["#000000", "#ff0054", "#ffbd00"],
+    "sourceUrl": "https://daftpunk.com/",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/d0/Alive_2007.jpg",
+    "createdAt": "2025-01-07T20:10:00.000Z",
+    "updatedAt": "2025-01-07T20:10:00.000Z"
+  },
+  {
+    "id": "itm_007",
+    "title": "Identité visuelle – Netflix",
+    "author": "Hans Bacher",
+    "tags": ["identité", "typographie", "logo"],
+    "colors": ["#e50914", "#000000", "#ffffff"],
+    "sourceUrl": "https://about.netflix.com/",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Netflix_logo.svg",
+    "createdAt": "2025-01-08T09:05:00.000Z",
+    "updatedAt": "2025-01-08T09:05:00.000Z"
+  },
+  {
+    "id": "itm_008",
+    "title": "Couverture TIME – Person of the Year 2023",
+    "author": "TIME Magazine",
+    "tags": ["presse", "illustration", "couverture"],
+    "colors": ["#e63946", "#f1faee", "#1d3557"],
+    "sourceUrl": "https://time.com/",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/0b/TIME_Person_of_the_Year_2023_cover.jpg",
+    "createdAt": "2025-01-09T13:25:00.000Z",
+    "updatedAt": "2025-01-09T13:25:00.000Z"
+  },
+  {
+    "id": "itm_009",
+    "title": "Poster minimaliste – Mont Fuji",
+    "author": "Ryo Takemasa",
+    "tags": ["illustration", "paysage", "minimalisme"],
+    "colors": ["#2a9d8f", "#e9c46a", "#f4a261"],
+    "sourceUrl": "https://www.behance.net/ryotakemasa",
+    "imageUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/1a53d7123456789.5ecb11d89ffb2.jpg",
+    "createdAt": "2025-01-10T10:00:00.000Z",
+    "updatedAt": "2025-01-10T10:00:00.000Z"
+  },
+  {
+    "id": "itm_010",
+    "title": "Affiche publicitaire – Air France 1955",
+    "author": "Bernard Villemot",
+    "tags": ["affiche", "publicité", "voyage"],
+    "colors": ["#004b87", "#ffcc00", "#ffffff"],
+    "sourceUrl": "https://fr.wikipedia.org/wiki/Bernard_Villemot",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Air_France_Villemot_poster.jpg",
+    "createdAt": "2025-01-11T15:40:00.000Z",
+    "updatedAt": "2025-01-11T15:40:00.000Z"
+  }
+]

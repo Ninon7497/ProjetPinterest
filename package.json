@@ -1,12 +1,18 @@
 {
   "name": "media-lib",
-  "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:server": "nodemon server/src/app.js",
+    "dev:client": "npm --prefix client run dev",
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\""
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "express": "^5.1.0",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10",
+    "concurrently": "^9.0.0"
+  }
 }
