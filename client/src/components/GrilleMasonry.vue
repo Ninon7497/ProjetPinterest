@@ -1,101 +1,103 @@
 <template>
-    <div class="grille-container">
-        <div v-for="item in filteredItems" :key="item.id" class="grille-item" @click="openPopup(item)">
-            <div class="item-card">
-                <img :src="item.image" alt="Affiche" />
-                <h3>{{ item.titre }}</h3>
-                <p>{{ item.auteur }}</p>
-                <div class="tags">
-                    <span v-for="tag in item.tags" :key="tag" class="tag">#{{ tag }}</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Pop-up -->
-        <AfficheItem v-if="selectedItem" :item="selectedItem" @close="selectedItem = null" />
-
-        <!-- Si aucune affiche -->
-        <p v-if="!filteredItems.length" class="no-items">Aucune affiche trouvée.</p>
+  <div class="grille-container">
+    <div v-for="item in items" :key="item.id" class="grille-item" @click="openPopup(item)">
+      <div class="item-card">
+        <img :src="item.image" :alt="item.titre" />
+        <!-- <h3>{{ item.titre }}</h3>
+        <p>{{ item.auteur }}</p>
+        <div class="tags">
+          <span v-for="tag in item.tags" :key="tag" class="tag">#{{ tag }}</span>
+        </div> -->
+      </div>
     </div>
+
+    <AfficheItem v-if="selectedItem" :item="selectedItem" @close="selectedItem = null" />
+
+    <p v-if="!loading && !items.length" class="no-items">Aucune affiche trouvée.</p>
+    <p v-if="loading" class="no-items">Chargement…</p>
+
+    <div class="util-flex gap-2" style="justify-content:center; margin-top:16px;">
+      <button class="btn--ghost" :disabled="page===1" @click="changePage(page-1)">Précédent</button>
+      <span class="card__meta">Page {{ page }}</span>
+      <button class="btn--ghost" :disabled="page*limit>=total" @click="changePage(page+1)">Suivant</button>
+    </div>
+  </div>
 </template>
 
 <script>
 import AfficheItem from "./AfficheItem.vue";
 
-export default {
-    name: "Grille",
-    components: { AfficheItem },
-    props: {
-        filters: { type: Object, required: true },
-    },
-    data() {
-        return {
-            items: [
-                {
-                    id: 1,
-                    titre: "Affiche Sunset",
-                    auteur: "Jean Dupont",
-                    image: "https://via.placeholder.com/200x300?text=Affiche+1",
-                    tags: ["nature", "sunset"],
-                    couleur: "orange",
-                },
-                {
-                    id: 2,
-                    titre: "Affiche Nuit",
-                    auteur: "Marie Claire",
-                    image: "https://via.placeholder.com/200x300?text=Affiche+2",
-                    tags: ["night", "stars"],
-                    couleur: "bleu",
-                },
-                {
-                    id: 3,
-                    titre: "Affiche Montagne",
-                    auteur: "Paul Martin",
-                    image: "https://via.placeholder.com/200x300?text=Affiche+3",
-                    tags: ["mountain", "nature"],
-                    couleur: "vert",
-                },
-                {
-                    id: 4,
-                    titre: "Affiche ",
-                    auteur: "Janne",
-                    image: "https://via.placeholder.com/200x300?text=Affiche+1",
-                    tags: ["nature", "sunset"],
-                    couleur: "bleu",
-                },
-            ],
-            selectedItem: null,
-        };
-    },
-    computed: {
-        filteredItems() {
-            const { search, tag, color } = this.filters;
+const API = import.meta.env?.VITE_API_URL || "http://localhost:3000/api";
 
-            return this.items.filter((item) => {
-                const matchesSearch =
-                    !search || item.titre.toLowerCase().includes(search.toLowerCase());
-                const matchesTag = !tag || item.tags.includes(tag);
-                const matchesColor = !color || item.couleur === color;
-                return matchesSearch && matchesTag && matchesColor;
-            });
-        },
+export default {
+  name: "Grille",
+  components: { AfficheItem },
+  props: {
+    filters: { type: Object, required: true },
+  },
+  data() {
+    return {
+      items: [],
+      total: 0,
+      page: 1,
+      limit: 5,
+      loading: false,
+      selectedItem: null,
+      _t: null, 
+    };
+  },
+  watch: {
+    filters: {
+      deep: true,
+      handler() {
+        clearTimeout(this._t);
+        this.page = 1;
+        this._t = setTimeout(() => this.fetchItems(), 300);
+      },
     },
-    methods: {
-        openPopup(item) {
-            this.selectedItem = item;
-        },
-        async fetchItems() {
-            try {
-                const response = await fetch("/api/affiches");
-                this.items = await response.json();
-            } catch (error) {
-                console.error("Erreur lors du chargement des affiches :", error);
-            }
-        },
+  },
+  methods: {
+    openPopup(item) { this.selectedItem = item; },
+
+    changePage(p) {
+      this.page = p;
+      this.fetchItems();
     },
-    mounted() {
-        // this.fetchItems();
+
+    async fetchItems() {
+      this.loading = true;
+      try {
+        const params = new URLSearchParams();
+        if (this.filters?.search) params.set("q", this.filters.search);
+        if (this.filters?.tag)    params.set("tags", this.filters.tag);
+        if (this.filters?.colorHex) params.set("colors", this.filters.colorHex); 
+
+        params.set("page", String(this.page));
+        params.set("limit", String(this.limit));
+
+        const res = await fetch(`${API}/items?${params.toString()}`);
+        const json = await res.json();
+        this.items = (json.data || []).map(i => ({
+          id: i.id,
+          titre: i.title,
+          auteur: i.author || "",
+          image: i.imageUrl,
+          tags: i.tags || [],
+          couleurHex: (i.colors || [])[0] || null
+        }));
+        this.total = json.total || this.items.length;
+      } catch (e) {
+        console.error("Erreur lors du chargement des affiches :", error);
+        this.items = [];
+        this.total = 0;
+      } finally {
+        this.loading = false;
+      }
     },
+  },
+  mounted() {
+    this.fetchItems();
+  },
 };
 </script>
 
