@@ -24,8 +24,12 @@ export default {
 
 <style scoped>
 .search-bar input {
-    padding: 0.5rem;
-    width: 100%;
-    max-width: 400px;
+    width: 700px;
+    height: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #81BB79;
+    color: #81BB79;
 }
 </style>

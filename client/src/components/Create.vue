@@ -26,9 +26,9 @@
                 <div>
                     <p>Choisis une couleur :</p>
                     <div class="color-list">
-                        <div class="color-circle" :class="{ active: localColor === '' }" @click="selectColor('')">
+                        <!-- <div class="color-circle" :class="{ active: localColor === '' }" @click="selectColor('')">
                             <span class="color-label">Toutes</span>
-                        </div>
+                        </div> -->
                         <div v-for="color in colors" :key="color.name" class="color-circle"
                             :class="{ active: localColor === color.name }" @click="selectColor(color.name)">
                             <span class="color-circle-inner" :style="{ backgroundColor: color.hex }"></span>
@@ -188,15 +188,16 @@ export default {
     user-select: none;
 }
 
+
 .color-circle.active {
     border-color: #333;
 }
 
-.color-label {
+/* .color-label {
     font-size: 14px;
     font-weight: 600;
     color: #333;
-}
+} */
 
 .color-circle-inner {
     width: 24px;
