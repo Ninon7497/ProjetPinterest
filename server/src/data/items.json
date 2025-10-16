@@ -1,189 +1,332 @@
 [
   {
-    "id": "itm_b5750b27",
-    "title": "Affiche vintage",
-    "author": "Jane Doe",
-    "tags": [
-      "vintage",
-      "art d�co"
-    ],
-    "colors": [
-      "#aabbcc"
-    ],
-    "sourceUrl": "",
-    "imageUrl": "https://exemple.com/affiche.jpg",
-    "createdAt": "2025-10-15T14:02:27.830Z",
-    "updatedAt": "2025-10-15T14:02:27.830Z"
-  },
-  {
     "id": "itm_001",
-    "title": "Affiche Bauhaus 1923",
-    "author": "Herbert Bayer",
-    "tags": [
-      "affiche",
-      "bauhaus",
-      "design graphique"
-    ],
-    "colors": [
-      "#f94144",
-      "#f9c74f",
-      "#277da1"
-    ],
-    "sourceUrl": "https://www.moma.org/collection/works/79870",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Bauhaus_Ausstellung_1923_poster.png",
-    "createdAt": "2025-01-02T09:30:00.000Z",
-    "updatedAt": "2025-01-02T09:30:00.000Z"
+    "title": "Affiche géométrique rouge",
+    "author": "Studio Orizon",
+    "tags": ["affiche", "graphisme", "minimalisme"],
+    "colors": ["#cc0000", "#ffffff", "#000000"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/affiche001/600/800",
+    "createdAt": "2025-01-01T09:00:00.000Z",
+    "updatedAt": "2025-01-01T09:00:00.000Z"
   },
   {
     "id": "itm_002",
-    "title": "Couverture Vogue – Juin 1950",
-    "author": "Erwin Blumenfeld",
-    "tags": [
-      "photographie",
-      "mode",
-      "couverture"
-    ],
-    "colors": [
-      "#22223b",
-      "#f2e9e4",
-      "#c9ada7"
-    ],
-    "sourceUrl": "https://www.vogue.com/article/erwin-blumenfeld-1950-cover",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Vogue_cover_1950.jpg",
-    "createdAt": "2025-01-03T11:00:00.000Z",
-    "updatedAt": "2025-01-03T11:00:00.000Z"
+    "title": "Poster typographique bleu",
+    "author": "Atelier Nord",
+    "tags": ["typographie", "affiche"],
+    "colors": ["#000080"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/affiche002/600/800",
+    "createdAt": "2025-01-02T09:00:00.000Z",
+    "updatedAt": "2025-01-02T09:00:00.000Z"
   },
   {
     "id": "itm_003",
-    "title": "Affiche de film Metropolis",
-    "author": "Heinz Schulz-Neudamm",
-    "tags": [
-      "cinéma",
-      "science-fiction",
-      "affiche"
-    ],
-    "colors": [
-      "#dda15e",
-      "#bc6c25",
-      "#283618"
-    ],
-    "sourceUrl": "https://fr.wikipedia.org/wiki/Metropolis_(film,_1927)",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Metropolisposter.jpg",
-    "createdAt": "2025-01-04T14:15:00.000Z",
-    "updatedAt": "2025-01-04T14:15:00.000Z"
+    "title": "Couverture magazine – Horizon",
+    "author": "Ana Mora",
+    "tags": ["magazine", "couverture", "illustration"],
+    "colors": ["#e67e22"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/couv003/600/800",
+    "createdAt": "2025-01-03T09:00:00.000Z",
+    "updatedAt": "2025-01-03T09:00:00.000Z"
   },
   {
     "id": "itm_004",
-    "title": "Identité visuelle – Tokyo 2020",
-    "author": "Asao Tokolo",
-    "tags": [
-      "identité",
-      "jeux olympiques",
-      "logo"
-    ],
-    "colors": [
-      "#0a0a0a",
-      "#1d3557",
-      "#f1faee"
-    ],
-    "sourceUrl": "https://olympics.com/en/olympic-games/tokyo-2020",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/36/2020_Summer_Olympics_logo.svg",
-    "createdAt": "2025-01-05T08:20:00.000Z",
-    "updatedAt": "2025-01-05T08:20:00.000Z"
+    "title": "Affiche nature minimaliste",
+    "author": "Ryo Takemasa",
+    "tags": ["illustration", "paysage", "minimalisme"],
+    "colors": ["#ffffff"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/nature004/600/800",
+    "createdAt": "2025-01-04T09:00:00.000Z",
+    "updatedAt": "2025-01-04T09:00:00.000Z"
   },
   {
     "id": "itm_005",
-    "title": "Couverture The New Yorker – Avril 2022",
-    "author": "Adrian Tomine",
-    "tags": [
-      "illustration",
-      "magazine",
-      "couverture"
-    ],
-    "colors": [
-      "#264653",
-      "#2a9d8f",
-      "#e9c46a"
-    ],
-    "sourceUrl": "https://www.newyorker.com/",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/a/a1/The_New_Yorker_April_2022_cover.jpg",
-    "createdAt": "2025-01-06T17:45:00.000Z",
-    "updatedAt": "2025-01-06T17:45:00.000Z"
+    "title": "Poster abstrait violet",
+    "author": "Studio 42",
+    "tags": ["affiche", "abstrait"],
+    "colors": ["#9b59b6"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/violet005/600/800",
+    "createdAt": "2025-01-05T09:00:00.000Z",
+    "updatedAt": "2025-01-05T09:00:00.000Z"
   },
   {
     "id": "itm_006",
-    "title": "Affiche de concert – Daft Punk Alive 2007",
-    "author": "So Me",
-    "tags": [
-      "musique",
-      "affiche",
-      "électronique"
-    ],
-    "colors": [
-      "#000000",
-      "#ff0054",
-      "#ffbd00"
-    ],
-    "sourceUrl": "https://daftpunk.com/",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/d0/Alive_2007.jpg",
-    "createdAt": "2025-01-07T20:10:00.000Z",
-    "updatedAt": "2025-01-07T20:10:00.000Z"
+    "title": "Identité événement – Nuit des idées",
+    "author": "Collectif Bleu",
+    "tags": ["identité", "événement", "logo"],
+    "colors": ["#f7d02e"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/nuit006/600/800",
+    "createdAt": "2025-01-06T09:00:00.000Z",
+    "updatedAt": "2025-01-06T09:00:00.000Z"
   },
   {
     "id": "itm_007",
-    "title": "Identité visuelle – Netflix",
-    "author": "Hans Bacher",
-    "tags": [
-      "identité",
-      "typographie",
-      "logo"
-    ],
-    "colors": [
-      "#e50914",
-      "#000000",
-      "#ffffff"
-    ],
-    "sourceUrl": "https://about.netflix.com/",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/69/Netflix_logo.svg",
-    "createdAt": "2025-01-08T09:05:00.000Z",
-    "updatedAt": "2025-01-08T09:05:00.000Z"
+    "title": "Affiche moderniste orange",
+    "author": "Linea Studio",
+    "tags": ["affiche", "modernisme"],
+    "colors": ["#ffffff"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/orange007/600/800",
+    "createdAt": "2025-01-07T09:00:00.000Z",
+    "updatedAt": "2025-01-07T09:00:00.000Z"
   },
   {
     "id": "itm_008",
-    "title": "Couverture TIME – Person of the Year 2023",
-    "author": "TIME Magazine",
-    "tags": [
-      "presse",
-      "illustration",
-      "couverture"
-    ],
-    "colors": [
-      "#e63946",
-      "#f1faee",
-      "#1d3557"
-    ],
-    "sourceUrl": "https://time.com/",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/en/0/0b/TIME_Person_of_the_Year_2023_cover.jpg",
-    "createdAt": "2025-01-09T13:25:00.000Z",
-    "updatedAt": "2025-01-09T13:25:00.000Z"
+    "title": "Couverture photo noir & blanc",
+    "author": "E. Blumenfeld",
+    "tags": ["photographie", "magazine", "couverture"],
+    "colors": ["#000000"],
+    "sourceUrl": "https://upload.wikimedia.org/",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Vogue_cover_1950.jpg",
+    "createdAt": "2025-01-08T09:00:00.000Z",
+    "updatedAt": "2025-01-08T09:00:00.000Z"
   },
   {
     "id": "itm_009",
-    "title": "Poster minimaliste – Mont Fuji",
-    "author": "Ryo Takemasa",
-    "tags": [
-      "illustration",
-      "paysage",
-      "minimalisme"
-    ],
-    "colors": [
-      "#2a9d8f",
-      "#e9c46a",
-      "#f4a261"
-    ],
-    "sourceUrl": "https://www.behance.net/ryotakemasa",
-    "imageUrl": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/1a53d7123456789.5ecb11d89ffb2.jpg",
-    "createdAt": "2025-01-10T10:00:00.000Z",
-    "updatedAt": "2025-01-10T10:00:00.000Z"
+    "title": "Poster concept vert",
+    "author": "Studio Verde",
+    "tags": ["affiche", "concept"],
+    "colors": ["#008000"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/vert009/600/800",
+    "createdAt": "2025-01-09T09:00:00.000Z",
+    "updatedAt": "2025-01-09T09:00:00.000Z"
+  },
+  {
+    "id": "itm_010",
+    "title": "Affiche contrastes noir/blanc",
+    "author": "Noir Studio",
+    "tags": ["affiche", "typographie", "minimalisme"],
+    "colors": ["#000000"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/noirblanc010/600/800",
+    "createdAt": "2025-01-10T09:00:00.000Z",
+    "updatedAt": "2025-01-10T09:00:00.000Z"
+  },
+  {
+    "id": "itm_011",
+    "title": "Affiche Bauhaus revisitée",
+    "author": "Herbert B.",
+    "tags": ["affiche", "bauhaus", "design graphique"],
+    "colors": ["#cc0000"],
+    "sourceUrl": "https://upload.wikimedia.org/",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Bauhaus_Ausstellung_1923_poster.png",
+    "createdAt": "2025-01-11T09:00:00.000Z",
+    "updatedAt": "2025-01-11T09:00:00.000Z"
+  },
+  {
+    "id": "itm_012",
+    "title": "Poster éditorial blanc pur",
+    "author": "Atelier Blanc",
+    "tags": ["magazine", "édition"],
+    "colors": ["#ffffff"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/blanc012/600/800",
+    "createdAt": "2025-01-12T09:00:00.000Z",
+    "updatedAt": "2025-01-12T09:00:00.000Z"
+  },
+  {
+    "id": "itm_013",
+    "title": "Affiche sportive bleu nuit",
+    "author": "SportLab",
+    "tags": ["affiche", "événement"],
+    "colors": ["#000080", "#ffffff", "#cc0000"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/sport013/600/800",
+    "createdAt": "2025-01-13T09:00:00.000Z",
+    "updatedAt": "2025-01-13T09:00:00.000Z"
+  },
+  {
+    "id": "itm_014",
+    "title": "Couverture culture – Jaune",
+    "author": "Mira Soto",
+    "tags": ["magazine", "couverture", "culture"],
+    "colors": ["#f7d02e", "#000000", "#ffffff"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/jaune014/600/800",
+    "createdAt": "2025-01-14T09:00:00.000Z",
+    "updatedAt": "2025-01-14T09:00:00.000Z"
+  },
+  {
+    "id": "itm_015",
+    "title": "Identité techno violet",
+    "author": "Kinetik",
+    "tags": ["identité", "logo"],
+    "colors": ["#9b59b6", "#000000", "#ffffff"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/violet015/600/800",
+    "createdAt": "2025-01-15T09:00:00.000Z",
+    "updatedAt": "2025-01-15T09:00:00.000Z"
+  },
+  {
+    "id": "itm_016",
+    "title": "Poster voyage Air Moderne",
+    "author": "B. Villemot",
+    "tags": ["affiche", "publicité", "voyage"],
+    "colors": ["#000080", "#ff0000", "#ffffff"],
+    "sourceUrl": "https://upload.wikimedia.org/",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Air_France_Villemot_poster.jpg",
+    "createdAt": "2025-01-16T09:00:00.000Z",
+    "updatedAt": "2025-01-16T09:00:00.000Z"
+  },
+  {
+    "id": "itm_017",
+    "title": "Affiche cinéma – Métropolis",
+    "author": "H. Schulz-Neudamm",
+    "tags": ["cinéma", "science-fiction", "affiche"],
+    "colors": ["#e67e22", "#000000", "#ffffff"],
+    "sourceUrl": "https://upload.wikimedia.org/",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Metropolisposter.jpg",
+    "createdAt": "2025-01-17T09:00:00.000Z",
+    "updatedAt": "2025-01-17T09:00:00.000Z"
+  },
+  {
+    "id": "itm_018",
+    "title": "Poster rouge minimal",
+    "author": "Atelier Rouge",
+    "tags": ["affiche", "minimalisme"],
+    "colors": ["#cc0000", "#ffffff"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/rouge018/600/800",
+    "createdAt": "2025-01-18T09:00:00.000Z",
+    "updatedAt": "2025-01-18T09:00:00.000Z"
+  },
+  {
+    "id": "itm_019",
+    "title": "Couverture – Noir profond",
+    "author": "C. Noir",
+    "tags": ["magazine", "couverture"],
+    "colors": ["#000000", "#ffffff"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/noir019/600/800",
+    "createdAt": "2025-01-19T09:00:00.000Z",
+    "updatedAt": "2025-01-19T09:00:00.000Z"
+  },
+  {
+    "id": "itm_020",
+    "title": "Identité – Vert synthétique",
+    "author": "Green Lab",
+    "tags": ["identité", "logo"],
+    "colors": ["#008000", "#ffffff", "#000000"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/green020/600/800",
+    "createdAt": "2025-01-20T09:00:00.000Z",
+    "updatedAt": "2025-01-20T09:00:00.000Z"
+  },
+  {
+    "id": "itm_021",
+    "title": "Affiche orange rétro",
+    "author": "Studio Retro",
+    "tags": ["affiche", "rétro"],
+    "colors": ["#e67e22", "#000000"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/orange021/600/800",
+    "createdAt": "2025-01-21T09:00:00.000Z",
+    "updatedAt": "2025-01-21T09:00:00.000Z"
+  },
+  {
+    "id": "itm_022",
+    "title": "Poster jaune éditorial",
+    "author": "Ligne Claire",
+    "tags": ["édition", "affiche"],
+    "colors": ["#f7d02e", "#000000", "#ffffff"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/jaune022/600/800",
+    "createdAt": "2025-01-22T09:00:00.000Z",
+    "updatedAt": "2025-01-22T09:00:00.000Z"
+  },
+  {
+    "id": "itm_023",
+    "title": "Couverture minimaliste blanche",
+    "author": "Atelier Serein",
+    "tags": ["magazine", "minimalisme", "couverture"],
+    "colors": ["#ffffff", "#000000"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/blanc023/600/800",
+    "createdAt": "2025-01-23T09:00:00.000Z",
+    "updatedAt": "2025-01-23T09:00:00.000Z"
+  },
+  {
+    "id": "itm_024",
+    "title": "Affiche bleue architecturale",
+    "author": "Plan Studio",
+    "tags": ["affiche", "architecture"],
+    "colors": ["#000080", "#ffffff"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/bleu024/600/800",
+    "createdAt": "2025-01-24T09:00:00.000Z",
+    "updatedAt": "2025-01-24T09:00:00.000Z"
+  },
+  {
+    "id": "itm_025",
+    "title": "Poster mixte rouge/violet",
+    "author": "Dual Studio",
+    "tags": ["affiche", "abstrait"],
+    "colors": ["#cc0000", "#9b59b6", "#ffffff"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/mix025/600/800",
+    "createdAt": "2025-01-25T09:00:00.000Z",
+    "updatedAt": "2025-01-25T09:00:00.000Z"
+  },
+  {
+    "id": "itm_026",
+    "title": "Identité noire & blanche",
+    "author": "Mono Labs",
+    "tags": ["identité", "logo", "branding"],
+    "colors": ["#000000", "#ffffff"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/mono026/600/800",
+    "createdAt": "2025-01-26T09:00:00.000Z",
+    "updatedAt": "2025-01-26T09:00:00.000Z"
+  },
+  {
+    "id": "itm_027",
+    "title": "Affiche verte botanique",
+    "author": "Florae",
+    "tags": ["affiche", "botanique", "illustration"],
+    "colors": ["#008000", "#ffffff", "#000000"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/botanique027/600/800",
+    "createdAt": "2025-01-27T09:00:00.000Z",
+    "updatedAt": "2025-01-27T09:00:00.000Z"
+  },
+  {
+    "id": "itm_028",
+    "title": "Couverture violet électrique",
+    "author": "Neon Press",
+    "tags": ["magazine", "couverture"],
+    "colors": ["#9b59b6", "#000000", "#ffffff"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/violet028/600/800",
+    "createdAt": "2025-01-28T09:00:00.000Z",
+    "updatedAt": "2025-01-28T09:00:00.000Z"
+  },
+  {
+    "id": "itm_029",
+    "title": "Affiche rouge & jaune",
+    "author": "Linea Sud",
+    "tags": ["affiche", "publicité"],
+    "colors": ["#cc0000", "#f7d02e", "#000000"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/ry029/600/800",
+    "createdAt": "2025-01-29T09:00:00.000Z",
+    "updatedAt": "2025-01-29T09:00:00.000Z"
+  },
+  {
+    "id": "itm_030",
+    "title": "Poster bleu & blanc minimal",
+    "author": "Studio Nord",
+    "tags": ["affiche", "minimalisme"],
+    "colors": ["#000080", "#ffffff"],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/bleublanc030/600/800",
+    "createdAt": "2025-01-30T09:00:00.000Z",
+    "updatedAt": "2025-01-30T09:00:00.000Z"
   }
 ]
