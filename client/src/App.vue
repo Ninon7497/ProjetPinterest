@@ -1,46 +1,62 @@
 <template>
-  <div class="test">
-    <h1>TEST</h1>
-    <div class="app-container">
-      <h1>Médiathèque d’inspirations visuelles</h1>
+  <!-- Header + search bar -->
+  <Header @searchChanged="onSearchChanged" />
 
-      Barre de recherche / filtres
-      <SearchBar @filterChanged="updateFilters" />
+  <div class="app-container">
 
-      <br>
-      Liste des affiches filtrée
-      <AfficheList :filters="filters" />
+    <!-- Bouton filtre -->
+    <button class="btn-filters" @click="toggleFilters">
+      <img src="./images/filters_menu.svg" />
+    </button>
 
-      Formulaire d’ajout / édition
-      <AfficheForm @itemAdded="addItem" />
-    </div>
+    <!-- Filtres -->
+    <Filters v-if="showFilters" @filterChanged="onFilterChanged" />
+
+    <!-- Affichage des tags sélectionnés -->
+
+    <AfficheTag :filters="filters" />
+
   </div>
+
+  <!-- Grille avec les filtres  -->
+  <Grille :filters="filters" />
 </template>
 
+
 <script>
-import SearchBar from './components/SearchBar.vue'
-import AfficheList from './components/AfficheList.vue'
-import AfficheForm from './components/AfficheForm.vue'
+import Header from './components/Headers.vue'
+import Filters from './components/Filters.vue'
+// import AfficheTag from './components/AfficheTag.vue'
+import Grille from './components/GrilleMasonry.vue'
 
 export default {
   name: 'App',
   components: {
-    SearchBar,
-    AfficheList,
-    AfficheForm
+    Header,
+    Filters,
+    // AfficheTag,
+    Grille
   },
   data() {
     return {
-      filters: {},
-      items: []
+      showFilters: false,
+      filters: {
+        search: '',
+        tag: '',
+        color: ''
+      }
     }
   },
   methods: {
-    updateFilters(newFilters) {
-      this.filters = newFilters
+    toggleFilters() {
+      this.showFilters = !this.showFilters
     },
-    addItem(newItem) {
-      this.items.push(newItem)
+    onSearchChanged(payload) {
+      this.filters.search = payload.search
+    },
+    onFilterChanged(payload) {
+      this.filters.tag = payload.tag
+      this.filters.color = payload.color
     }
   }
 }
@@ -48,11 +64,27 @@ export default {
 
 <style>
 body {
-  background-color: black;
+  margin: 0;
+  padding: 0;
+  background-color: #81BB79;
 }
 
 .app-container {
-  background-color: gray;
+  margin: 2%;
+  background-color: transparent;
+  padding: 1rem;
+}
 
+.btn-filters {
+  background-color: transparent;
+  border: none;
+  border-radius: 40%;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.5s;
+}
+
+button:hover {
+  opacity: 1;
 }
 </style>
