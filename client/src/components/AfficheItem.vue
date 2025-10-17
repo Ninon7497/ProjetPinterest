@@ -6,12 +6,16 @@
       <!-- Mode affichage -->
       <div v-if="!editMode" class="view-mode">
         <img :src="img" :alt="title" class="affiche-img" />
+        <br></br>
         <h2>{{ title }}</h2>
         <p><strong>Auteur :</strong> {{ author || "—" }}</p>
+        <!-- Bouton source -->
+        <button class="btn_source"><a href=""></a>Sources</button>
         <div class="tags" v-if="tags?.length">
           <span v-for="tag in tags" :key="tag" class="tag">#{{ tag }}</span>
         </div>
       </div>
+
 
       <!-- Boutons modifier / supprimer -->
       <div v-if="!editMode" class="logo">
@@ -25,20 +29,20 @@
 
       <!-- Mode édition -->
       <form v-if="editMode" class="form" @submit.prevent="saveUpdate">
-        <h3>Modifier l’item</h3>
+        <h2>Modifier l’item</h2>
 
-        <label>
+        <label style="font-weight: bold; font-size: large;">
           Titre
           <input v-model.trim="form.title" type="text" required />
         </label>
 
-        <label>
+        <label style="font-weight: bold; font-size: large;">
           Auteur
           <input v-model.trim="form.author" type="text" />
         </label>
 
         <!-- Tags -->
-        <label>
+        <label style="font-weight: bold; font-size: large;">
           Tags (séparés par des virgules)
           <input v-model="form.tagsText" type="text" placeholder="affiche, illustration" />
         </label>
@@ -157,9 +161,12 @@ export default {
 
 <style scoped>
 .overlay {
-  position: fixed; inset: 0;
+  position: fixed;
+  inset: 0;
   background: rgba(0, 0, 0, 0.6);
-  display: flex; justify-content: center; align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   z-index: 1000;
 }
 
@@ -167,18 +174,18 @@ export default {
   background: white;
   padding: 20px;
   border-radius: 12px;
-  max-width: 360px; 
+  max-width: 360px;
   width: 90%;
   text-align: center;
   position: relative;
 }
 
 .affiche-img {
-  width: 70%; 
+  width: 70%;
   height: auto;
   border-radius: 8px;
   margin-bottom: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .close-btn {
@@ -189,6 +196,23 @@ export default {
   background: none;
   font-size: 20px;
   cursor: pointer;
+}
+
+.btn_source {
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: none;
+  padding: 10px;
+  background-color: #81BB79;
+  color: white;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.btn_source:hover {
+  opacity: 1;
 }
 
 .tags {
@@ -206,7 +230,7 @@ export default {
 
 .logo {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 10px;
   margin-top: 8px;
 }
@@ -221,11 +245,13 @@ export default {
   align-items: center;
   opacity: 0.75;
   transition: 0.2s;
+
 }
 
 .icon-btn img {
-  width: 18px;
-  height: 18px;
+  width: 30px;
+  height: 30px;
+  display: flex;
 }
 
 .icon-btn:hover {
@@ -241,7 +267,7 @@ export default {
   gap: 8px;
 }
 
-.form h3 {
+.form h2 {
   margin-bottom: 6px;
   text-align: center;
 }
@@ -273,13 +299,32 @@ export default {
 }
 
 .btn.primary {
-  background: #111;
-  color: #fff;
-  border-color: #111;
+
+  border-radius: 20px;
+  border: none;
+  background-color: #81BB79;
+  min-width: 110px;
+  padding: 10px;
+  color: white;
+  opacity: 0.9;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.btn.btn.primary:hover {
+  opacity: 1;
 }
 
 .btn.ghost {
   background: transparent;
+  border-radius: 20px;
+  color: #333;
+  border: 1px solid #ccc;
+  transition: 0.6s;
+}
+
+.btn.ghost:hover {
+  border-color: black;
 }
 
 .error {
