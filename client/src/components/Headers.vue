@@ -1,9 +1,9 @@
 <template>
     <div class="Header">
         <p class="logo">Logo</p>
-        <SearchBar @searchChanged="handleSearchChanged" />
+        <SearchBar class="search" @searchChanged="handleSearchChanged" />
 
-        <p @click="showCreate = true" style="cursor: pointer;">Crée ton post </p>
+        <img class="create_logo" src="../images/create.svg" @click="showCreate = true"></img>
 
         <Create v-if="showCreate" @close="closeCreate"></Create>
     </div>
@@ -46,5 +46,29 @@ export default {
 .logo {
     color: yellowgreen;
     font-weight: bold;
+}
+
+.create_logo {
+    width: 60px;
+    opacity: 0.9;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.create_logo:hover {
+    opacity: 1;
+}
+
+@media (max-width: 600px) {
+    .Header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
 }
 </style>

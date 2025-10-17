@@ -1,26 +1,37 @@
 <template>
     <div class="grille-container">
-        <div v-for="item in filteredItems" :key="item.id" class="grille-item" @click="openPopup(item)">
+        <div v-for="(item, index) in items" :key="item.id" class="grille-item" @click="openPopup(item)"
+            :style="getItemStyle(index)">
             <div class="item-card">
-                <img :src="item.image" alt="Affiche" />
-                <h3>{{ item.titre }}</h3>
-                <p>{{ item.auteur }}</p>
-                <div class="tags">
-                    <span v-for="tag in item.tags" :key="tag" class="tag">#{{ tag }}</span>
-                </div>
+                <img :src="item.image" :alt="item.titre" />
+                <!-- <h3>{{ item.titre }}</h3>
+        <p>{{ item.auteur }}</p>
+        <div class="tags">
+          <span v-for="tag in item.tags" :key="tag" class="tag">#{{ tag }}</span>
+        </div> -->
             </div>
         </div>
 
-        <!-- Pop-up -->
         <AfficheItem v-if="selectedItem" :item="selectedItem" @close="selectedItem = null" />
 
-        <!-- Si aucune affiche -->
-        <p v-if="!filteredItems.length" class="no-items">Aucune affiche trouvée.</p>
+        <p v-if="!loading && !items.length" class="no-items">Aucune affiche trouvée.</p>
+        <p v-if="loading" class="no-items">Chargement…</p>
+
+        <div class="util-flex gap-2">
+            <button class="btn--ghost" :disabled="page === 1" @click="changePage(page - 1)"><img
+                    src="../images/previous.svg"></img> </button>
+            <span class="card__meta" style="color: white;">Page {{ page }} / {{ totalPages }}</span>
+            <button class="btn--ghost" :disabled="page * limit >= total" @click="changePage(page + 1)"><img
+                    src="../images/next.svg"></img> </button>
+        </div>
     </div>
 </template>
 
 <script>
+import { computed } from "vue";
 import AfficheItem from "./AfficheItem.vue";
+
+const API = import.meta.env?.VITE_API_URL || "http://localhost:3000/api";
 
 export default {
     name: "Grille",
@@ -30,85 +41,131 @@ export default {
     },
     data() {
         return {
-            items: [
-                {
-                    id: 1,
-                    titre: "Affiche Sunset",
-                    auteur: "Jean Dupont",
-                    image: "https://via.placeholder.com/200x300?text=Affiche+1",
-                    tags: ["nature", "sunset"],
-                    couleur: "orange",
-                },
-                {
-                    id: 2,
-                    titre: "Affiche Nuit",
-                    auteur: "Marie Claire",
-                    image: "https://via.placeholder.com/200x300?text=Affiche+2",
-                    tags: ["night", "stars"],
-                    couleur: "bleu",
-                },
-                {
-                    id: 3,
-                    titre: "Affiche Montagne",
-                    auteur: "Paul Martin",
-                    image: "https://via.placeholder.com/200x300?text=Affiche+3",
-                    tags: ["mountain", "nature"],
-                    couleur: "vert",
-                },
-                {
-                    id: 4,
-                    titre: "Affiche ",
-                    auteur: "Janne",
-                    image: "https://via.placeholder.com/200x300?text=Affiche+1",
-                    tags: ["nature", "sunset"],
-                    couleur: "bleu",
-                },
-            ],
+            items: [],
+            total: 0,
+            page: 1,
+            limit: 10,
+            loading: false,
             selectedItem: null,
+            _t: null,
         };
     },
     computed: {
-        filteredItems() {
-            const { search, tag, color } = this.filters;
-
-            return this.items.filter((item) => {
-                const matchesSearch =
-                    !search || item.titre.toLowerCase().includes(search.toLowerCase());
-                const matchesTag = !tag || item.tags.includes(tag);
-                const matchesColor = !color || item.couleur === color;
-                return matchesSearch && matchesTag && matchesColor;
-            });
+        totalPages() {
+            return Math.ceil(this.total / this.limit)
+        }
+    },
+    watch: {
+        filters: {
+            deep: true,
+            handler() {
+                clearTimeout(this._t);
+                this.page = 1;
+                this._t = setTimeout(() => this.fetchItems(), 300);
+            },
         },
     },
     methods: {
-        openPopup(item) {
-            this.selectedItem = item;
+        openPopup(item) { this.selectedItem = item; },
+
+        changePage(p) {
+            this.page = p;
+            this.fetchItems();
         },
+
         async fetchItems() {
+            this.loading = true;
             try {
-                const response = await fetch("/api/affiches");
-                this.items = await response.json();
-            } catch (error) {
+                const params = new URLSearchParams();
+                if (this.filters?.search) params.set("q", this.filters.search);
+                if (this.filters?.tag) params.set("tags", this.filters.tag);
+                if (this.filters?.colorHex) params.set("colors", this.filters.colorHex);
+
+                params.set("page", String(this.page));
+                params.set("limit", String(this.limit));
+
+                const res = await fetch(`${API}/items?${params.toString()}`);
+                const json = await res.json();
+                this.items = (json.data || []).map(i => ({
+                    id: i.id,
+                    titre: i.title,
+                    auteur: i.author || "",
+                    image: i.imageUrl,
+                    tags: i.tags || [],
+                    couleurHex: (i.colors || [])[0] || null
+                }));
+                this.total = json.total || this.items.length;
+            } catch (e) {
                 console.error("Erreur lors du chargement des affiches :", error);
+                this.items = [];
+                this.total = 0;
+            } finally {
+                this.loading = false;
+            }
+        },
+        getItemStyle(index) {
+            const offset = (index % 5) * 2;
+            return {
+                position: 'relative',
+                top: `${-offset}px`
             }
         },
     },
     mounted() {
-        // this.fetchItems();
+        this.fetchItems();
     },
 };
 </script>
 
 <style scoped>
 .grille-container {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
     justify-content: center;
+    width: 100%;
+}
+
+.util-flex {
+    position: relative;
+    min-height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    z-index: 100;
+    gap: 10px;
+}
+
+
+.btn--ghost {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding: 5px;
+}
+
+.btn--ghost img {
+    width: 70px;
+    height: 70px;
+}
+
+.btn--ghost:hover {
+    opacity: 1;
+
 }
 
 .grille-item {
-    width: 200px;
+    width: 300px;
     cursor: pointer;
     transition: transform 0.2s ease;
 }

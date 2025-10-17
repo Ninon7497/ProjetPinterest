@@ -1,4 +1,3 @@
-// server/src/app.js
 import express from "express";
 import cors from "cors";
 import crypto from "crypto";
@@ -9,12 +8,10 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: "2mb" }));
 
-// Helpers
 const uid = (p = "itm_") => p + crypto.randomBytes(4).toString("hex");
 const nowISO = () => new Date().toISOString();
 const HEX = /^#([0-9a-f]{6})$/i;
 
-// middleware générique pour retourner les erreurs de validation
 function validateRequest(req, res, next) {
   const errors = validationResult(req);
   if (errors.isEmpty()) return next();
@@ -28,7 +25,6 @@ function validateRequest(req, res, next) {
   });
 }
 
-// Normalisation complète (création) ou partielle (update)
 function normalizeItemPayload(body, partial = false) {
   const out = {};
   if (!partial || body.title !== undefined) out.title = String(body.title || "").trim();
