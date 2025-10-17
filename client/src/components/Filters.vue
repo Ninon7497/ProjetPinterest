@@ -11,7 +11,7 @@
 
       <button
         class="btn-color"
-        v-for="tag in tags"
+        v-for="tag in displayTags"
         :key="tag"
         :class="{ active: tag === localTag }"
         @click="selectTag(tag)"
@@ -46,11 +46,16 @@ export default {
   name: "Filters",
   props: {
     modelTag: { type: String, default: "" },
-    modelColorHex: { type: String, default: "" } // ex: "#000080"
+    modelColorHex: { type: String, default: "" },
+    availableTags: { type: Array, default: () => [] },
+    tagsEndpoint: { type: String, default: "/api/tags" }
   },
   data() {
     return {
-      tags: ["illustration", "affiche", "magazine", "logo", "photographie", "cinéma", "minimalisme"],
+      localTag: "",
+      localColorName: "",
+      localHex: "",
+      fetchedTags: [],
       colors: [
         { name: "rouge",  hex: "#cc0000" },
         { name: "jaune",  hex: "#f7d02e" },
@@ -60,10 +65,7 @@ export default {
         { name: "violet", hex: "#9b59b6" },
         { name: "blanc",  hex: "#ffffff" },
         { name: "noir",   hex: "#000000" }
-      ],
-      localTag: "",
-      localColorName: "",
-      localHex: "" 
+      ]
     };
   },
   computed: {
@@ -71,6 +73,34 @@ export default {
       const m = new Map();
       this.colors.forEach(c => m.set(c.name, c.hex.toLowerCase()));
       return m;
+    },
+    displayTags() {
+      const raw = (this.availableTags && this.availableTags.length)
+        ? this.availableTags
+        : this.fetchedTags;
+
+      const seen = new Set();
+      return (raw || [])
+        .map(t => String(t || "").trim())
+        .filter(Boolean)
+        .filter(t => {
+          const key = t.toLowerCase();
+          if (seen.has(key)) return false;
+          seen.add(key);
+          return true;
+        })
+        .sort((a, b) => a.localeCompare(b, "fr", { sensitivity: "base" }));
+    }
+  },
+  async mounted() {
+    if (!this.availableTags || this.availableTags.length === 0) {
+      try {
+        const res = await fetch(this.tagsEndpoint, { headers: { "Accept": "application/json" } });
+        const data = await res.json();
+        this.fetchedTags = Array.isArray(data.data) ? data.data : [];
+      } catch (e) {
+        console.error("Impossible de charger les tags:", e);
+      }
     }
   },
   methods: {
@@ -92,19 +122,14 @@ export default {
   watch: {
     modelTag: {
       immediate: true,
-      handler(v) {
-        this.localTag = v || "";
-      }
+      handler(v) { this.localTag = v || ""; }
     },
     modelColorHex: {
       immediate: true,
       handler(v) {
         const hex = (v || "").toLowerCase();
         this.localHex = hex;
-        if (!hex) {
-          this.localColorName = "";
-          return;
-        }
+        if (!hex) { this.localColorName = ""; return; }
         const entry = this.colors.find(c => c.hex.toLowerCase() === hex);
         this.localColorName = entry ? entry.name : "";
       }

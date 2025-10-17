@@ -1,40 +1,39 @@
 <template>
-  <!-- Header + search bar -->
+  <!-- Header + barre de recherche -->
   <Header @searchChanged="onSearchChanged" />
 
   <div class="app-container">
-
     <!-- Bouton filtre -->
-    <button class="btn-filters" @click="toggleFilters">
-      <img src="./images/filters_menu.svg" />
+    <button class="btn-filters" @click="toggleFilters" title="Filtres">
+      <img src="/src/images/filters_menu.svg" alt="Filtres" />
     </button>
 
     <!-- Filtres -->
-    <Filters v-if="showFilters" @filterChanged="onFilterChanged" />
-
-    <!-- Affichage des tags sélectionnés -->
-
-    <AfficheTag :filters="filters" />
-
+    <Filters
+      v-if="showFilters"
+      :availableTags="availableTags"
+      :modelTag="filters.tag"
+      :modelColorHex="filters.colorHex"
+      @filtersChanged="onFiltersChanged"
+    />
   </div>
 
-  <!-- Grille avec les filtres  -->
+  <!-- Grille des images filtrées -->
   <Grille :filters="filters" />
 </template>
-
 
 <script>
 import Header from './components/Headers.vue'
 import Filters from './components/Filters.vue'
-// import AfficheTag from './components/AfficheTag.vue'
 import Grille from './components/GrilleMasonry.vue'
+
+const API = import.meta.env.VITE_API_URL || "http://localhost:3000/api";
 
 export default {
   name: 'App',
   components: {
     Header,
     Filters,
-    // AfficheTag,
     Grille
   },
   data() {
@@ -43,23 +42,42 @@ export default {
       filters: {
         search: '',
         tag: '',
-        color: ''
-      }
-    }
+        color: '',
+        colorHex: ''
+      },
+      availableTags: []
+    };
   },
   methods: {
     toggleFilters() {
-      this.showFilters = !this.showFilters
+      this.showFilters = !this.showFilters;
     },
+
     onSearchChanged(payload) {
-      this.filters.search = payload.search
+      this.filters.search = payload.search || '';
     },
-    onFilterChanged(payload) {
-      this.filters.tag = payload.tag
-      this.filters.color = payload.color
+
+    onFiltersChanged({ tag, colorHex }) {
+      this.filters.tag = tag || '';
+      this.filters.colorHex = colorHex || '';
+      this.filters.color = this.filters.colorHex || '';
+    },
+
+    async fetchAvailableTags() {
+      try {
+        const res = await fetch(`${API}/tags`, { headers: { "Accept": "application/json" } });
+        const json = await res.json();
+        this.availableTags = Array.isArray(json.data) ? json.data : [];
+      } catch (e) {
+        console.error('Erreur lors du chargement des tags:', e);
+        this.availableTags = [];
+      }
     }
+  },
+  mounted() {
+    this.fetchAvailableTags();
   }
-}
+};
 </script>
 
 <style>

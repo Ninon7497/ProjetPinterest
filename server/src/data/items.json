@@ -1,21 +1,16 @@
 [
   {
-    "id": "itm_001",
-    "title": "Affiche géométrique rouge",
-    "author": "Studio Orizon",
-    "tags": ["affiche", "graphisme", "minimalisme"],
-    "colors": ["#cc0000", "#ffffff", "#000000"],
-    "sourceUrl": "https://picsum.photos/",
-    "imageUrl": "https://picsum.photos/seed/affiche001/600/800",
-    "createdAt": "2025-01-01T09:00:00.000Z",
-    "updatedAt": "2025-01-01T09:00:00.000Z"
-  },
-  {
     "id": "itm_002",
     "title": "Poster typographique bleu",
     "author": "Atelier Nord",
-    "tags": ["typographie", "affiche"],
-    "colors": ["#000080"],
+    "tags": [
+      "typographie",
+      "affiche",
+      "bleu"
+    ],
+    "colors": [
+      "#000080"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/affiche002/600/800",
     "createdAt": "2025-01-02T09:00:00.000Z",
@@ -25,8 +20,14 @@
     "id": "itm_003",
     "title": "Couverture magazine – Horizon",
     "author": "Ana Mora",
-    "tags": ["magazine", "couverture", "illustration"],
-    "colors": ["#e67e22"],
+    "tags": [
+      "magazine",
+      "couverture",
+      "illustration"
+    ],
+    "colors": [
+      "#008000"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/couv003/600/800",
     "createdAt": "2025-01-03T09:00:00.000Z",
@@ -36,8 +37,14 @@
     "id": "itm_004",
     "title": "Affiche nature minimaliste",
     "author": "Ryo Takemasa",
-    "tags": ["illustration", "paysage", "minimalisme"],
-    "colors": ["#ffffff"],
+    "tags": [
+      "illustration",
+      "paysage",
+      "minimalisme"
+    ],
+    "colors": [
+      "#ffffff"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/nature004/600/800",
     "createdAt": "2025-01-04T09:00:00.000Z",
@@ -47,8 +54,14 @@
     "id": "itm_005",
     "title": "Poster abstrait violet",
     "author": "Studio 42",
-    "tags": ["affiche", "abstrait"],
-    "colors": ["#9b59b6"],
+    "tags": [
+      "affiche",
+      "abstrait",
+      "violet"
+    ],
+    "colors": [
+      "#9b59b6"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/violet005/600/800",
     "createdAt": "2025-01-05T09:00:00.000Z",
@@ -58,8 +71,15 @@
     "id": "itm_006",
     "title": "Identité événement – Nuit des idées",
     "author": "Collectif Bleu",
-    "tags": ["identité", "événement", "logo"],
-    "colors": ["#f7d02e"],
+    "tags": [
+      "identité",
+      "événement",
+      "logo",
+      "jaune"
+    ],
+    "colors": [
+      "#f7d02e"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/nuit006/600/800",
     "createdAt": "2025-01-06T09:00:00.000Z",
@@ -69,30 +89,32 @@
     "id": "itm_007",
     "title": "Affiche moderniste orange",
     "author": "Linea Studio",
-    "tags": ["affiche", "modernisme"],
-    "colors": ["#ffffff"],
+    "tags": [
+      "affiche",
+      "modernisme",
+      "orange"
+    ],
+    "colors": [
+      "#e67e22"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/orange007/600/800",
     "createdAt": "2025-01-07T09:00:00.000Z",
     "updatedAt": "2025-01-07T09:00:00.000Z"
   },
   {
-    "id": "itm_008",
-    "title": "Couverture photo noir & blanc",
-    "author": "E. Blumenfeld",
-    "tags": ["photographie", "magazine", "couverture"],
-    "colors": ["#000000"],
-    "sourceUrl": "https://upload.wikimedia.org/",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/96/Vogue_cover_1950.jpg",
-    "createdAt": "2025-01-08T09:00:00.000Z",
-    "updatedAt": "2025-01-08T09:00:00.000Z"
-  },
-  {
     "id": "itm_009",
     "title": "Poster concept vert",
     "author": "Studio Verde",
-    "tags": ["affiche", "concept"],
-    "colors": ["#008000"],
+    "tags": [
+      "affiche",
+      "concept",
+      "vert",
+      "sport"
+    ],
+    "colors": [
+      "#008000"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/vert009/600/800",
     "createdAt": "2025-01-09T09:00:00.000Z",
@@ -102,30 +124,33 @@
     "id": "itm_010",
     "title": "Affiche contrastes noir/blanc",
     "author": "Noir Studio",
-    "tags": ["affiche", "typographie", "minimalisme"],
-    "colors": ["#000000"],
+    "tags": [
+      "affiche",
+      "typographie",
+      "minimalisme",
+      "blanc"
+    ],
+    "colors": [
+      "#ffffff"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/noirblanc010/600/800",
     "createdAt": "2025-01-10T09:00:00.000Z",
     "updatedAt": "2025-01-10T09:00:00.000Z"
   },
   {
-    "id": "itm_011",
-    "title": "Affiche Bauhaus revisitée",
-    "author": "Herbert B.",
-    "tags": ["affiche", "bauhaus", "design graphique"],
-    "colors": ["#cc0000"],
-    "sourceUrl": "https://upload.wikimedia.org/",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Bauhaus_Ausstellung_1923_poster.png",
-    "createdAt": "2025-01-11T09:00:00.000Z",
-    "updatedAt": "2025-01-11T09:00:00.000Z"
-  },
-  {
     "id": "itm_012",
     "title": "Poster éditorial blanc pur",
     "author": "Atelier Blanc",
-    "tags": ["magazine", "édition"],
-    "colors": ["#ffffff"],
+    "tags": [
+      "magazine",
+      "édition",
+      "blanc",
+      "affiche"
+    ],
+    "colors": [
+      "#ffffff"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/blanc012/600/800",
     "createdAt": "2025-01-12T09:00:00.000Z",
@@ -135,8 +160,15 @@
     "id": "itm_013",
     "title": "Affiche sportive bleu nuit",
     "author": "SportLab",
-    "tags": ["affiche", "événement"],
-    "colors": ["#000080", "#ffffff", "#cc0000"],
+    "tags": [
+      "affiche",
+      "événement",
+      "bleu",
+      "sport"
+    ],
+    "colors": [
+      "#000080"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/sport013/600/800",
     "createdAt": "2025-01-13T09:00:00.000Z",
@@ -146,8 +178,14 @@
     "id": "itm_014",
     "title": "Couverture culture – Jaune",
     "author": "Mira Soto",
-    "tags": ["magazine", "couverture", "culture"],
-    "colors": ["#f7d02e", "#000000", "#ffffff"],
+    "tags": [
+      "magazine",
+      "couverture",
+      "culture"
+    ],
+    "colors": [
+      "#f7d02e"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/jaune014/600/800",
     "createdAt": "2025-01-14T09:00:00.000Z",
@@ -157,41 +195,31 @@
     "id": "itm_015",
     "title": "Identité techno violet",
     "author": "Kinetik",
-    "tags": ["identité", "logo"],
-    "colors": ["#9b59b6", "#000000", "#ffffff"],
+    "tags": [
+      "identité",
+      "logo",
+      "violet"
+    ],
+    "colors": [
+      "#9b59b6"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/violet015/600/800",
     "createdAt": "2025-01-15T09:00:00.000Z",
     "updatedAt": "2025-01-15T09:00:00.000Z"
   },
   {
-    "id": "itm_016",
-    "title": "Poster voyage Air Moderne",
-    "author": "B. Villemot",
-    "tags": ["affiche", "publicité", "voyage"],
-    "colors": ["#000080", "#ff0000", "#ffffff"],
-    "sourceUrl": "https://upload.wikimedia.org/",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Air_France_Villemot_poster.jpg",
-    "createdAt": "2025-01-16T09:00:00.000Z",
-    "updatedAt": "2025-01-16T09:00:00.000Z"
-  },
-  {
-    "id": "itm_017",
-    "title": "Affiche cinéma – Métropolis",
-    "author": "H. Schulz-Neudamm",
-    "tags": ["cinéma", "science-fiction", "affiche"],
-    "colors": ["#e67e22", "#000000", "#ffffff"],
-    "sourceUrl": "https://upload.wikimedia.org/",
-    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Metropolisposter.jpg",
-    "createdAt": "2025-01-17T09:00:00.000Z",
-    "updatedAt": "2025-01-17T09:00:00.000Z"
-  },
-  {
     "id": "itm_018",
     "title": "Poster rouge minimal",
     "author": "Atelier Rouge",
-    "tags": ["affiche", "minimalisme"],
-    "colors": ["#cc0000", "#ffffff"],
+    "tags": [
+      "affiche",
+      "minimalisme",
+      "rouge"
+    ],
+    "colors": [
+      "#cc0000"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/rouge018/600/800",
     "createdAt": "2025-01-18T09:00:00.000Z",
@@ -201,8 +229,14 @@
     "id": "itm_019",
     "title": "Couverture – Noir profond",
     "author": "C. Noir",
-    "tags": ["magazine", "couverture"],
-    "colors": ["#000000", "#ffffff"],
+    "tags": [
+      "magazine",
+      "couverture",
+      "vert"
+    ],
+    "colors": [
+      "#008000"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/noir019/600/800",
     "createdAt": "2025-01-19T09:00:00.000Z",
@@ -212,8 +246,15 @@
     "id": "itm_020",
     "title": "Identité – Vert synthétique",
     "author": "Green Lab",
-    "tags": ["identité", "logo"],
-    "colors": ["#008000", "#ffffff", "#000000"],
+    "tags": [
+      "identité",
+      "logo",
+      "vert",
+      "typographie"
+    ],
+    "colors": [
+      "#008000"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/green020/600/800",
     "createdAt": "2025-01-20T09:00:00.000Z",
@@ -223,8 +264,15 @@
     "id": "itm_021",
     "title": "Affiche orange rétro",
     "author": "Studio Retro",
-    "tags": ["affiche", "rétro"],
-    "colors": ["#e67e22", "#000000"],
+    "tags": [
+      "affiche",
+      "rétro",
+      "orange",
+      "logo"
+    ],
+    "colors": [
+      "#e67e22"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/orange021/600/800",
     "createdAt": "2025-01-21T09:00:00.000Z",
@@ -234,8 +282,15 @@
     "id": "itm_022",
     "title": "Poster jaune éditorial",
     "author": "Ligne Claire",
-    "tags": ["édition", "affiche"],
-    "colors": ["#f7d02e", "#000000", "#ffffff"],
+    "tags": [
+      "édition",
+      "affiche",
+      "jaune",
+      "culture"
+    ],
+    "colors": [
+      "#f7d02e"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/jaune022/600/800",
     "createdAt": "2025-01-22T09:00:00.000Z",
@@ -245,8 +300,15 @@
     "id": "itm_023",
     "title": "Couverture minimaliste blanche",
     "author": "Atelier Serein",
-    "tags": ["magazine", "minimalisme", "couverture"],
-    "colors": ["#ffffff", "#000000"],
+    "tags": [
+      "magazine",
+      "minimalisme",
+      "couverture",
+      "vert"
+    ],
+    "colors": [
+      "#008000"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/blanc023/600/800",
     "createdAt": "2025-01-23T09:00:00.000Z",
@@ -256,77 +318,1745 @@
     "id": "itm_024",
     "title": "Affiche bleue architecturale",
     "author": "Plan Studio",
-    "tags": ["affiche", "architecture"],
-    "colors": ["#000080", "#ffffff"],
+    "tags": [
+      "affiche",
+      "architecture",
+      "bleu",
+      "magazine"
+    ],
+    "colors": [
+      "#000080"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/bleu024/600/800",
     "createdAt": "2025-01-24T09:00:00.000Z",
-    "updatedAt": "2025-01-24T09:00:00.000Z"
+    "updatedAt": "2025-10-17T07:20:24.441Z"
   },
   {
     "id": "itm_025",
     "title": "Poster mixte rouge/violet",
     "author": "Dual Studio",
-    "tags": ["affiche", "abstrait"],
-    "colors": ["#cc0000", "#9b59b6", "#ffffff"],
+    "tags": [
+      "affiche",
+      "abstrait",
+      "rouge",
+      "logo"
+    ],
+    "colors": [
+      "#cc0000"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/mix025/600/800",
     "createdAt": "2025-01-25T09:00:00.000Z",
     "updatedAt": "2025-01-25T09:00:00.000Z"
   },
   {
-    "id": "itm_026",
-    "title": "Identité noire & blanche",
-    "author": "Mono Labs",
-    "tags": ["identité", "logo", "branding"],
-    "colors": ["#000000", "#ffffff"],
-    "sourceUrl": "https://picsum.photos/",
-    "imageUrl": "https://picsum.photos/seed/mono026/600/800",
-    "createdAt": "2025-01-26T09:00:00.000Z",
-    "updatedAt": "2025-01-26T09:00:00.000Z"
-  },
-  {
     "id": "itm_027",
-    "title": "Affiche verte botanique",
+    "title": "Affiche verte",
     "author": "Florae",
-    "tags": ["affiche", "botanique", "illustration"],
-    "colors": ["#008000", "#ffffff", "#000000"],
+    "tags": [
+      "affiche",
+      "botanique",
+      "illustration"
+    ],
+    "colors": [
+      "#008000"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/botanique027/600/800",
     "createdAt": "2025-01-27T09:00:00.000Z",
-    "updatedAt": "2025-01-27T09:00:00.000Z"
-  },
-  {
-    "id": "itm_028",
-    "title": "Couverture violet électrique",
-    "author": "Neon Press",
-    "tags": ["magazine", "couverture"],
-    "colors": ["#9b59b6", "#000000", "#ffffff"],
-    "sourceUrl": "https://picsum.photos/",
-    "imageUrl": "https://picsum.photos/seed/violet028/600/800",
-    "createdAt": "2025-01-28T09:00:00.000Z",
-    "updatedAt": "2025-01-28T09:00:00.000Z"
+    "updatedAt": "2025-10-17T06:59:20.569Z"
   },
   {
     "id": "itm_029",
     "title": "Affiche rouge & jaune",
     "author": "Linea Sud",
-    "tags": ["affiche", "publicité"],
-    "colors": ["#cc0000", "#f7d02e", "#000000"],
+    "tags": [
+      "affiche",
+      "publicité",
+      "rouge",
+      "packaging"
+    ],
+    "colors": [
+      "#cc0000"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/ry029/600/800",
     "createdAt": "2025-01-29T09:00:00.000Z",
-    "updatedAt": "2025-01-29T09:00:00.000Z"
+    "updatedAt": "2025-10-17T09:14:42.363Z"
   },
   {
     "id": "itm_030",
     "title": "Poster bleu & blanc minimal",
     "author": "Studio Nord",
-    "tags": ["affiche", "minimalisme"],
-    "colors": ["#000080", "#ffffff"],
+    "tags": [
+      "affiche",
+      "minimalisme",
+      "bleu"
+    ],
+    "colors": [
+      "#000080"
+    ],
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/bleublanc030/600/800",
     "createdAt": "2025-01-30T09:00:00.000Z",
     "updatedAt": "2025-01-30T09:00:00.000Z"
+  },
+  {
+    "id": "itm_031",
+    "title": "Affiche rouge",
+    "author": "Atelier Nord",
+    "tags": [
+      "affiche",
+      "rouge",
+      "typographie",
+      "minimalisme"
+    ],
+    "colors": [
+      "#cc0000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/rougeitm_031/600/800",
+    "createdAt": "2025-02-01T09:00:00Z",
+    "updatedAt": "2025-02-01T09:00:00Z"
+  },
+  {
+    "id": "itm_032",
+    "title": "Poster jaune",
+    "author": "Studio 42",
+    "tags": [
+      "affiche",
+      "jaune",
+      "logo",
+      "UI"
+    ],
+    "colors": [
+      "#f7d02e"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/jauneitm_032/600/800",
+    "createdAt": "2025-02-02T09:00:00Z",
+    "updatedAt": "2025-02-02T09:00:00Z"
+  },
+  {
+    "id": "itm_033",
+    "title": "Couverture orange",
+    "author": "Collectif Bleu",
+    "tags": [
+      "magazine",
+      "couverture",
+      "orange"
+    ],
+    "colors": [
+      "#e67e22"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/orangeitm_033/600/800",
+    "createdAt": "2025-02-03T09:00:00Z",
+    "updatedAt": "2025-02-03T09:00:00Z"
+  },
+  {
+    "id": "itm_034",
+    "title": "Identité bleu",
+    "author": "Linea Studio",
+    "tags": [
+      "identité",
+      "logo",
+      "bleu"
+    ],
+    "colors": [
+      "#000080"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/bleuitm_034/600/800",
+    "createdAt": "2025-02-04T09:00:00Z",
+    "updatedAt": "2025-02-04T09:00:00Z"
+  },
+  {
+    "id": "itm_035",
+    "title": "Affiche vert",
+    "author": "Studio Verde",
+    "tags": [
+      "affiche",
+      "vert",
+      "identité",
+      "typographie"
+    ],
+    "colors": [
+      "#008000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/vertitm_035/600/800",
+    "createdAt": "2025-02-05T09:00:00Z",
+    "updatedAt": "2025-02-05T09:00:00Z"
+  },
+  {
+    "id": "itm_036",
+    "title": "Poster violet",
+    "author": "Noir Studio",
+    "tags": [
+      "affiche",
+      "violet",
+      "architecture",
+      "sport"
+    ],
+    "colors": [
+      "#9b59b6"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/violetitm_036/600/800",
+    "createdAt": "2025-02-06T09:00:00Z",
+    "updatedAt": "2025-02-06T09:00:00Z"
+  },
+  {
+    "id": "itm_037",
+    "title": "Couverture blanc",
+    "author": "Atelier Blanc",
+    "tags": [
+      "magazine",
+      "couverture",
+      "blanc"
+    ],
+    "colors": [
+      "#ffffff"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/blancitm_037/600/800",
+    "createdAt": "2025-02-07T09:00:00Z",
+    "updatedAt": "2025-02-07T09:00:00Z"
+  },
+  {
+    "id": "itm_038",
+    "title": "Identité noir",
+    "author": "SportLab",
+    "tags": [
+      "identité",
+      "logo",
+      "noir"
+    ],
+    "colors": [
+      "#000000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/noiritm_038/600/800",
+    "createdAt": "2025-02-08T09:00:00Z",
+    "updatedAt": "2025-02-08T09:00:00Z"
+  },
+  {
+    "id": "itm_039",
+    "title": "Affiche rouge",
+    "author": "Mira Soto",
+    "tags": [
+      "affiche",
+      "rouge",
+      "branding"
+    ],
+    "colors": [
+      "#cc0000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/rougeitm_039/600/800",
+    "createdAt": "2025-02-09T09:00:00Z",
+    "updatedAt": "2025-02-09T09:00:00Z"
+  },
+  {
+    "id": "itm_040",
+    "title": "Poster jaune",
+    "author": "Kinetik",
+    "tags": [
+      "affiche",
+      "jaune",
+      "signalétique"
+    ],
+    "colors": [
+      "#f7d02e"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/jauneitm_040/600/800",
+    "createdAt": "2025-02-10T09:00:00Z",
+    "updatedAt": "2025-02-10T09:00:00Z"
+  },
+  {
+    "id": "itm_041",
+    "title": "Couverture orange",
+    "author": "Atelier Rouge",
+    "tags": [
+      "magazine",
+      "couverture",
+      "orange",
+      "édition"
+    ],
+    "colors": [
+      "#e67e22"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/orangeitm_041/600/800",
+    "createdAt": "2025-02-11T09:00:00Z",
+    "updatedAt": "2025-02-11T09:00:00Z"
+  },
+  {
+    "id": "itm_042",
+    "title": "Identité bleu",
+    "author": "C. Noir",
+    "tags": [
+      "identité",
+      "logo",
+      "bleu"
+    ],
+    "colors": [
+      "#000080"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/bleuitm_042/600/800",
+    "createdAt": "2025-02-12T09:00:00Z",
+    "updatedAt": "2025-02-12T09:00:00Z"
+  },
+  {
+    "id": "itm_043",
+    "title": "Affiche vert",
+    "author": "Green Lab",
+    "tags": [
+      "affiche",
+      "vert",
+      "édition"
+    ],
+    "colors": [
+      "#008000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/vertitm_043/600/800",
+    "createdAt": "2025-02-13T09:00:00Z",
+    "updatedAt": "2025-02-13T09:00:00Z"
+  },
+  {
+    "id": "itm_044",
+    "title": "Poster violet",
+    "author": "Studio Retro",
+    "tags": [
+      "affiche",
+      "violet",
+      "photographie",
+      "typographie"
+    ],
+    "colors": [
+      "#9b59b6"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/violetitm_044/600/800",
+    "createdAt": "2025-02-14T09:00:00Z",
+    "updatedAt": "2025-02-14T09:00:00Z"
+  },
+  {
+    "id": "itm_045",
+    "title": "Couverture blanc",
+    "author": "Ligne Claire",
+    "tags": [
+      "magazine",
+      "couverture",
+      "blanc"
+    ],
+    "colors": [
+      "#ffffff"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/blancitm_045/600/800",
+    "createdAt": "2025-02-15T09:00:00Z",
+    "updatedAt": "2025-02-15T09:00:00Z"
+  },
+  {
+    "id": "itm_046",
+    "title": "Identité noir",
+    "author": "Atelier Serein",
+    "tags": [
+      "identité",
+      "logo",
+      "noir"
+    ],
+    "colors": [
+      "#000000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/noiritm_046/600/800",
+    "createdAt": "2025-02-16T09:00:00Z",
+    "updatedAt": "2025-02-16T09:00:00Z"
+  },
+  {
+    "id": "itm_047",
+    "title": "Affiche rouge",
+    "author": "Plan Studio",
+    "tags": [
+      "affiche",
+      "rouge",
+      "sport"
+    ],
+    "colors": [
+      "#cc0000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/rougeitm_047/600/800",
+    "createdAt": "2025-02-17T09:00:00Z",
+    "updatedAt": "2025-02-17T09:00:00Z"
+  },
+  {
+    "id": "itm_048",
+    "title": "Poster jaune",
+    "author": "Dual Studio",
+    "tags": [
+      "affiche",
+      "jaune",
+      "illustration"
+    ],
+    "colors": [
+      "#f7d02e"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/jauneitm_048/600/800",
+    "createdAt": "2025-02-18T09:00:00Z",
+    "updatedAt": "2025-02-18T09:00:00Z"
+  },
+  {
+    "id": "itm_049",
+    "title": "Couverture orange",
+    "author": "Florae",
+    "tags": [
+      "magazine",
+      "couverture",
+      "orange",
+      "édition"
+    ],
+    "colors": [
+      "#e67e22"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/orangeitm_049/600/800",
+    "createdAt": "2025-02-19T09:00:00Z",
+    "updatedAt": "2025-02-19T09:00:00Z"
+  },
+  {
+    "id": "itm_050",
+    "title": "Identité bleu",
+    "author": "Linea Sud",
+    "tags": [
+      "identité",
+      "logo",
+      "bleu",
+      "abstrait"
+    ],
+    "colors": [
+      "#000080"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/bleuitm_050/600/800",
+    "createdAt": "2025-02-20T09:00:00Z",
+    "updatedAt": "2025-02-20T09:00:00Z"
+  },
+  {
+    "id": "itm_051",
+    "title": "Affiche vert",
+    "author": "Studio Nord",
+    "tags": [
+      "affiche",
+      "vert",
+      "photographie"
+    ],
+    "colors": [
+      "#008000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/vertitm_051/600/800",
+    "createdAt": "2025-02-21T09:00:00Z",
+    "updatedAt": "2025-02-21T09:00:00Z"
+  },
+  {
+    "id": "itm_052",
+    "title": "Poster violet",
+    "author": "Atelier Nord",
+    "tags": [
+      "affiche",
+      "violet",
+      "signalétique",
+      "branding"
+    ],
+    "colors": [
+      "#9b59b6"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/violetitm_052/600/800",
+    "createdAt": "2025-02-22T09:00:00Z",
+    "updatedAt": "2025-02-22T09:00:00Z"
+  },
+  {
+    "id": "itm_053",
+    "title": "Couverture blanc",
+    "author": "Studio 42",
+    "tags": [
+      "magazine",
+      "couverture",
+      "blanc",
+      "édition"
+    ],
+    "colors": [
+      "#ffffff"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/blancitm_053/600/800",
+    "createdAt": "2025-02-23T09:00:00Z",
+    "updatedAt": "2025-02-23T09:00:00Z"
+  },
+  {
+    "id": "itm_054",
+    "title": "Identité noir",
+    "author": "Collectif Bleu",
+    "tags": [
+      "identité",
+      "logo",
+      "noir"
+    ],
+    "colors": [
+      "#000000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/noiritm_054/600/800",
+    "createdAt": "2025-02-24T09:00:00Z",
+    "updatedAt": "2025-02-24T09:00:00Z"
+  },
+  {
+    "id": "itm_055",
+    "title": "Affiche rouge",
+    "author": "Linea Studio",
+    "tags": [
+      "affiche",
+      "rouge",
+      "graphisme",
+      "culture"
+    ],
+    "colors": [
+      "#cc0000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/rougeitm_055/600/800",
+    "createdAt": "2025-02-25T09:00:00Z",
+    "updatedAt": "2025-02-25T09:00:00Z"
+  },
+  {
+    "id": "itm_056",
+    "title": "Poster jaune",
+    "author": "Studio Verde",
+    "tags": [
+      "affiche",
+      "jaune",
+      "édition",
+      "UI"
+    ],
+    "colors": [
+      "#f7d02e"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/jauneitm_056/600/800",
+    "createdAt": "2025-02-26T09:00:00Z",
+    "updatedAt": "2025-02-26T09:00:00Z"
+  },
+  {
+    "id": "itm_057",
+    "title": "Couverture orange",
+    "author": "Noir Studio",
+    "tags": [
+      "magazine",
+      "couverture",
+      "orange"
+    ],
+    "colors": [
+      "#e67e22"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/orangeitm_057/600/800",
+    "createdAt": "2025-02-27T09:00:00Z",
+    "updatedAt": "2025-02-27T09:00:00Z"
+  },
+  {
+    "id": "itm_058",
+    "title": "Identité bleu",
+    "author": "Atelier Blanc",
+    "tags": [
+      "identité",
+      "logo",
+      "bleu"
+    ],
+    "colors": [
+      "#000080"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/bleuitm_058/600/800",
+    "createdAt": "2025-02-28T09:00:00Z",
+    "updatedAt": "2025-02-28T09:00:00Z"
+  },
+  {
+    "id": "itm_059",
+    "title": "Affiche vert",
+    "author": "SportLab",
+    "tags": [
+      "affiche",
+      "vert",
+      "édition",
+      "UI"
+    ],
+    "colors": [
+      "#008000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/vertitm_059/600/800",
+    "createdAt": "2025-03-01T09:00:00Z",
+    "updatedAt": "2025-03-01T09:00:00Z"
+  },
+  {
+    "id": "itm_060",
+    "title": "Poster violet",
+    "author": "Mira Soto",
+    "tags": [
+      "affiche",
+      "violet",
+      "édition",
+      "poster"
+    ],
+    "colors": [
+      "#9b59b6"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/violetitm_060/600/800",
+    "createdAt": "2025-03-02T09:00:00Z",
+    "updatedAt": "2025-03-02T09:00:00Z"
+  },
+  {
+    "id": "itm_061",
+    "title": "Couverture blanc",
+    "author": "Kinetik",
+    "tags": [
+      "magazine",
+      "couverture",
+      "blanc"
+    ],
+    "colors": [
+      "#ffffff"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/blancitm_061/600/800",
+    "createdAt": "2025-03-03T09:00:00Z",
+    "updatedAt": "2025-03-03T09:00:00Z"
+  },
+  {
+    "id": "itm_062",
+    "title": "Identité noir",
+    "author": "Atelier Rouge",
+    "tags": [
+      "identité",
+      "logo",
+      "noir"
+    ],
+    "colors": [
+      "#000000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/noiritm_062/600/800",
+    "createdAt": "2025-03-04T09:00:00Z",
+    "updatedAt": "2025-03-04T09:00:00Z"
+  },
+  {
+    "id": "itm_063",
+    "title": "Affiche rouge",
+    "author": "C. Noir",
+    "tags": [
+      "affiche",
+      "rouge",
+      "UI",
+      "illustration"
+    ],
+    "colors": [
+      "#cc0000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/rougeitm_063/600/800",
+    "createdAt": "2025-03-05T09:00:00Z",
+    "updatedAt": "2025-03-05T09:00:00Z"
+  },
+  {
+    "id": "itm_064",
+    "title": "Poster jaune",
+    "author": "Green Lab",
+    "tags": [
+      "affiche",
+      "jaune",
+      "minimalisme"
+    ],
+    "colors": [
+      "#f7d02e"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/jauneitm_064/600/800",
+    "createdAt": "2025-03-06T09:00:00Z",
+    "updatedAt": "2025-03-06T09:00:00Z"
+  },
+  {
+    "id": "itm_065",
+    "title": "Couverture orange",
+    "author": "Studio Retro",
+    "tags": [
+      "magazine",
+      "couverture",
+      "orange",
+      "édition"
+    ],
+    "colors": [
+      "#e67e22"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/orangeitm_065/600/800",
+    "createdAt": "2025-03-07T09:00:00Z",
+    "updatedAt": "2025-03-07T09:00:00Z"
+  },
+  {
+    "id": "itm_066",
+    "title": "Identité bleu",
+    "author": "Ligne Claire",
+    "tags": [
+      "identité",
+      "logo",
+      "bleu",
+      "événement"
+    ],
+    "colors": [
+      "#000080"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/bleuitm_066/600/800",
+    "createdAt": "2025-03-08T09:00:00Z",
+    "updatedAt": "2025-03-08T09:00:00Z"
+  },
+  {
+    "id": "itm_067",
+    "title": "Affiche vert",
+    "author": "Atelier Serein",
+    "tags": [
+      "affiche",
+      "vert",
+      "logo"
+    ],
+    "colors": [
+      "#008000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/vertitm_067/600/800",
+    "createdAt": "2025-03-09T09:00:00Z",
+    "updatedAt": "2025-03-09T09:00:00Z"
+  },
+  {
+    "id": "itm_068",
+    "title": "Poster violet",
+    "author": "Plan Studio",
+    "tags": [
+      "affiche",
+      "violet",
+      "photographie"
+    ],
+    "colors": [
+      "#9b59b6"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/violetitm_068/600/800",
+    "createdAt": "2025-03-10T09:00:00Z",
+    "updatedAt": "2025-03-10T09:00:00Z"
+  },
+  {
+    "id": "itm_069",
+    "title": "Couverture blanc",
+    "author": "Dual Studio",
+    "tags": [
+      "magazine",
+      "couverture",
+      "blanc"
+    ],
+    "colors": [
+      "#ffffff"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/blancitm_069/600/800",
+    "createdAt": "2025-03-11T09:00:00Z",
+    "updatedAt": "2025-03-11T09:00:00Z"
+  },
+  {
+    "id": "itm_070",
+    "title": "Identité noir",
+    "author": "Florae",
+    "tags": [
+      "identité",
+      "logo",
+      "noir"
+    ],
+    "colors": [
+      "#000000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/noiritm_070/600/800",
+    "createdAt": "2025-03-12T09:00:00Z",
+    "updatedAt": "2025-03-12T09:00:00Z"
+  },
+  {
+    "id": "itm_071",
+    "title": "Affiche rouge",
+    "author": "Linea Sud",
+    "tags": [
+      "affiche",
+      "rouge",
+      "événement"
+    ],
+    "colors": [
+      "#cc0000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/rougeitm_071/600/800",
+    "createdAt": "2025-03-13T09:00:00Z",
+    "updatedAt": "2025-03-13T09:00:00Z"
+  },
+  {
+    "id": "itm_072",
+    "title": "Poster jaune",
+    "author": "Studio Nord",
+    "tags": [
+      "affiche",
+      "jaune",
+      "packaging"
+    ],
+    "colors": [
+      "#f7d02e"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/jauneitm_072/600/800",
+    "createdAt": "2025-03-14T09:00:00Z",
+    "updatedAt": "2025-03-14T09:00:00Z"
+  },
+  {
+    "id": "itm_073",
+    "title": "Couverture orange",
+    "author": "Atelier Nord",
+    "tags": [
+      "magazine",
+      "couverture",
+      "orange"
+    ],
+    "colors": [
+      "#e67e22"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/orangeitm_073/600/800",
+    "createdAt": "2025-03-15T09:00:00Z",
+    "updatedAt": "2025-03-15T09:00:00Z"
+  },
+  {
+    "id": "itm_074",
+    "title": "Identité bleu",
+    "author": "Studio 42",
+    "tags": [
+      "identité",
+      "logo",
+      "bleu",
+      "packaging"
+    ],
+    "colors": [
+      "#000080"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/bleuitm_074/600/800",
+    "createdAt": "2025-03-16T09:00:00Z",
+    "updatedAt": "2025-03-16T09:00:00Z"
+  },
+  {
+    "id": "itm_075",
+    "title": "Affiche vert",
+    "author": "Collectif Bleu",
+    "tags": [
+      "affiche",
+      "vert",
+      "branding"
+    ],
+    "colors": [
+      "#008000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/vertitm_075/600/800",
+    "createdAt": "2025-03-17T09:00:00Z",
+    "updatedAt": "2025-03-17T09:00:00Z"
+  },
+  {
+    "id": "itm_076",
+    "title": "Poster violet",
+    "author": "Linea Studio",
+    "tags": [
+      "affiche",
+      "violet",
+      "packaging",
+      "poster"
+    ],
+    "colors": [
+      "#9b59b6"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/violetitm_076/600/800",
+    "createdAt": "2025-03-18T09:00:00Z",
+    "updatedAt": "2025-03-18T09:00:00Z"
+  },
+  {
+    "id": "itm_077",
+    "title": "Couverture blanc",
+    "author": "Studio Verde",
+    "tags": [
+      "magazine",
+      "couverture",
+      "blanc"
+    ],
+    "colors": [
+      "#ffffff"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/blancitm_077/600/800",
+    "createdAt": "2025-03-19T09:00:00Z",
+    "updatedAt": "2025-03-19T09:00:00Z"
+  },
+  {
+    "id": "itm_078",
+    "title": "Identité noir",
+    "author": "Noir Studio",
+    "tags": [
+      "identité",
+      "logo",
+      "noir",
+      "culture"
+    ],
+    "colors": [
+      "#000000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/noiritm_078/600/800",
+    "createdAt": "2025-03-20T09:00:00Z",
+    "updatedAt": "2025-03-20T09:00:00Z"
+  },
+  {
+    "id": "itm_079",
+    "title": "Affiche rouge",
+    "author": "Atelier Blanc",
+    "tags": [
+      "affiche",
+      "rouge",
+      "magazine",
+      "signalétique"
+    ],
+    "colors": [
+      "#cc0000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/rougeitm_079/600/800",
+    "createdAt": "2025-03-21T09:00:00Z",
+    "updatedAt": "2025-03-21T09:00:00Z"
+  },
+  {
+    "id": "itm_080",
+    "title": "Poster jaune",
+    "author": "SportLab",
+    "tags": [
+      "affiche",
+      "jaune",
+      "publicité",
+      "architecture"
+    ],
+    "colors": [
+      "#f7d02e"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/jauneitm_080/600/800",
+    "createdAt": "2025-03-22T09:00:00Z",
+    "updatedAt": "2025-03-22T09:00:00Z"
+  },
+  {
+    "id": "itm_081",
+    "title": "Couverture orange",
+    "author": "Mira Soto",
+    "tags": [
+      "magazine",
+      "couverture",
+      "orange",
+      "édition"
+    ],
+    "colors": [
+      "#e67e22"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/orangeitm_081/600/800",
+    "createdAt": "2025-03-23T09:00:00Z",
+    "updatedAt": "2025-03-23T09:00:00Z"
+  },
+  {
+    "id": "itm_082",
+    "title": "Identité bleu",
+    "author": "Kinetik",
+    "tags": [
+      "identité",
+      "logo",
+      "bleu"
+    ],
+    "colors": [
+      "#000080"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/bleuitm_082/600/800",
+    "createdAt": "2025-03-24T09:00:00Z",
+    "updatedAt": "2025-03-24T09:00:00Z"
+  },
+  {
+    "id": "itm_083",
+    "title": "Affiche vert",
+    "author": "Atelier Rouge",
+    "tags": [
+      "affiche",
+      "vert",
+      "signalétique"
+    ],
+    "colors": [
+      "#008000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/vertitm_083/600/800",
+    "createdAt": "2025-03-25T09:00:00Z",
+    "updatedAt": "2025-03-25T09:00:00Z"
+  },
+  {
+    "id": "itm_084",
+    "title": "Poster violet",
+    "author": "C. Noir",
+    "tags": [
+      "affiche",
+      "violet",
+      "graphisme"
+    ],
+    "colors": [
+      "#9b59b6"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/violetitm_084/600/800",
+    "createdAt": "2025-03-26T09:00:00Z",
+    "updatedAt": "2025-03-26T09:00:00Z"
+  },
+  {
+    "id": "itm_085",
+    "title": "Couverture blanc",
+    "author": "Green Lab",
+    "tags": [
+      "magazine",
+      "couverture",
+      "blanc",
+      "édition"
+    ],
+    "colors": [
+      "#ffffff"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/blancitm_085/600/800",
+    "createdAt": "2025-03-27T09:00:00Z",
+    "updatedAt": "2025-03-27T09:00:00Z"
+  },
+  {
+    "id": "itm_086",
+    "title": "Identité noir",
+    "author": "Studio Retro",
+    "tags": [
+      "identité",
+      "logo",
+      "noir"
+    ],
+    "colors": [
+      "#000000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/noiritm_086/600/800",
+    "createdAt": "2025-03-28T09:00:00Z",
+    "updatedAt": "2025-03-28T09:00:00Z"
+  },
+  {
+    "id": "itm_087",
+    "title": "Affiche rouge",
+    "author": "Ligne Claire",
+    "tags": [
+      "affiche",
+      "rouge",
+      "culture",
+      "logo"
+    ],
+    "colors": [
+      "#cc0000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/rougeitm_087/600/800",
+    "createdAt": "2025-03-29T09:00:00Z",
+    "updatedAt": "2025-03-29T09:00:00Z"
+  },
+  {
+    "id": "itm_088",
+    "title": "Poster jaune",
+    "author": "Atelier Serein",
+    "tags": [
+      "affiche",
+      "jaune",
+      "logo"
+    ],
+    "colors": [
+      "#f7d02e"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/jauneitm_088/600/800",
+    "createdAt": "2025-03-30T09:00:00Z",
+    "updatedAt": "2025-03-30T09:00:00Z"
+  },
+  {
+    "id": "itm_089",
+    "title": "Couverture orange",
+    "author": "Plan Studio",
+    "tags": [
+      "magazine",
+      "couverture",
+      "orange",
+      "édition"
+    ],
+    "colors": [
+      "#e67e22"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/orangeitm_089/600/800",
+    "createdAt": "2025-03-31T09:00:00Z",
+    "updatedAt": "2025-03-31T09:00:00Z"
+  },
+  {
+    "id": "itm_090",
+    "title": "Identité bleu",
+    "author": "Dual Studio",
+    "tags": [
+      "identité",
+      "logo",
+      "bleu",
+      "édition"
+    ],
+    "colors": [
+      "#000080"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/bleuitm_090/600/800",
+    "createdAt": "2025-04-01T09:00:00Z",
+    "updatedAt": "2025-04-01T09:00:00Z"
+  },
+  {
+    "id": "itm_091",
+    "title": "Affiche vert",
+    "author": "Florae",
+    "tags": [
+      "affiche",
+      "vert",
+      "poster"
+    ],
+    "colors": [
+      "#008000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/vertitm_091/600/800",
+    "createdAt": "2025-04-02T09:00:00Z",
+    "updatedAt": "2025-04-02T09:00:00Z"
+  },
+  {
+    "id": "itm_092",
+    "title": "Poster violet",
+    "author": "Linea Sud",
+    "tags": [
+      "affiche",
+      "violet",
+      "abstrait",
+      "photographie"
+    ],
+    "colors": [
+      "#9b59b6"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/violetitm_092/600/800",
+    "createdAt": "2025-04-03T09:00:00Z",
+    "updatedAt": "2025-04-03T09:00:00Z"
+  },
+  {
+    "id": "itm_093",
+    "title": "Couverture blanc",
+    "author": "Studio Nord",
+    "tags": [
+      "magazine",
+      "couverture",
+      "blanc"
+    ],
+    "colors": [
+      "#ffffff"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/blancitm_093/600/800",
+    "createdAt": "2025-04-04T09:00:00Z",
+    "updatedAt": "2025-04-04T09:00:00Z"
+  },
+  {
+    "id": "itm_094",
+    "title": "Identité noir",
+    "author": "Atelier Nord",
+    "tags": [
+      "identité",
+      "logo",
+      "noir"
+    ],
+    "colors": [
+      "#000000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/noiritm_094/600/800",
+    "createdAt": "2025-04-05T09:00:00Z",
+    "updatedAt": "2025-04-05T09:00:00Z"
+  },
+  {
+    "id": "itm_095",
+    "title": "Affiche rouge",
+    "author": "Studio 42",
+    "tags": [
+      "affiche",
+      "rouge",
+      "architecture",
+      "graphisme"
+    ],
+    "colors": [
+      "#cc0000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/rougeitm_095/600/800",
+    "createdAt": "2025-04-06T09:00:00Z",
+    "updatedAt": "2025-04-06T09:00:00Z"
+  },
+  {
+    "id": "itm_096",
+    "title": "Poster jaune",
+    "author": "Collectif Bleu",
+    "tags": [
+      "affiche",
+      "jaune",
+      "sport"
+    ],
+    "colors": [
+      "#f7d02e"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/jauneitm_096/600/800",
+    "createdAt": "2025-04-07T09:00:00Z",
+    "updatedAt": "2025-04-07T09:00:00Z"
+  },
+  {
+    "id": "itm_097",
+    "title": "Couverture orange",
+    "author": "Linea Studio",
+    "tags": [
+      "magazine",
+      "couverture",
+      "orange"
+    ],
+    "colors": [
+      "#e67e22"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/orangeitm_097/600/800",
+    "createdAt": "2025-04-08T09:00:00Z",
+    "updatedAt": "2025-04-08T09:00:00Z"
+  },
+  {
+    "id": "itm_098",
+    "title": "Identité bleu",
+    "author": "Studio Verde",
+    "tags": [
+      "identité",
+      "logo",
+      "bleu",
+      "typographie"
+    ],
+    "colors": [
+      "#000080"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/bleuitm_098/600/800",
+    "createdAt": "2025-04-09T09:00:00Z",
+    "updatedAt": "2025-04-09T09:00:00Z"
+  },
+  {
+    "id": "itm_099",
+    "title": "Affiche vert",
+    "author": "Noir Studio",
+    "tags": [
+      "affiche",
+      "vert",
+      "logo"
+    ],
+    "colors": [
+      "#008000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/vertitm_099/600/800",
+    "createdAt": "2025-04-10T09:00:00Z",
+    "updatedAt": "2025-04-10T09:00:00Z"
+  },
+  {
+    "id": "itm_100",
+    "title": "Poster violet",
+    "author": "Atelier Blanc",
+    "tags": [
+      "affiche",
+      "violet",
+      "abstrait",
+      "événement"
+    ],
+    "colors": [
+      "#9b59b6"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/violetitm_100/600/800",
+    "createdAt": "2025-04-11T09:00:00Z",
+    "updatedAt": "2025-04-11T09:00:00Z"
+  },
+  {
+    "id": "itm_101",
+    "title": "Couverture blanc",
+    "author": "SportLab",
+    "tags": [
+      "magazine",
+      "couverture",
+      "blanc",
+      "édition"
+    ],
+    "colors": [
+      "#ffffff"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/blancitm_101/600/800",
+    "createdAt": "2025-04-12T09:00:00Z",
+    "updatedAt": "2025-04-12T09:00:00Z"
+  },
+  {
+    "id": "itm_102",
+    "title": "Identité noir",
+    "author": "Mira Soto",
+    "tags": [
+      "identité",
+      "logo",
+      "noir",
+      "culture"
+    ],
+    "colors": [
+      "#000000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/noiritm_102/600/800",
+    "createdAt": "2025-04-13T09:00:00Z",
+    "updatedAt": "2025-04-13T09:00:00Z"
+  },
+  {
+    "id": "itm_103",
+    "title": "Affiche rouge",
+    "author": "Kinetik",
+    "tags": [
+      "affiche",
+      "rouge",
+      "sport"
+    ],
+    "colors": [
+      "#cc0000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/rougeitm_103/600/800",
+    "createdAt": "2025-04-14T09:00:00Z",
+    "updatedAt": "2025-04-14T09:00:00Z"
+  },
+  {
+    "id": "itm_104",
+    "title": "Poster jaune",
+    "author": "Atelier Rouge",
+    "tags": [
+      "affiche",
+      "jaune",
+      "illustration"
+    ],
+    "colors": [
+      "#f7d02e"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/jauneitm_104/600/800",
+    "createdAt": "2025-04-15T09:00:00Z",
+    "updatedAt": "2025-04-15T09:00:00Z"
+  },
+  {
+    "id": "itm_105",
+    "title": "Couverture orange",
+    "author": "C. Noir",
+    "tags": [
+      "magazine",
+      "couverture",
+      "orange"
+    ],
+    "colors": [
+      "#e67e22"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/orangeitm_105/600/800",
+    "createdAt": "2025-04-16T09:00:00Z",
+    "updatedAt": "2025-04-16T09:00:00Z"
+  },
+  {
+    "id": "itm_106",
+    "title": "Identité bleu",
+    "author": "Green Lab",
+    "tags": [
+      "identité",
+      "logo",
+      "bleu"
+    ],
+    "colors": [
+      "#000080"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/bleuitm_106/600/800",
+    "createdAt": "2025-04-17T09:00:00Z",
+    "updatedAt": "2025-04-17T09:00:00Z"
+  },
+  {
+    "id": "itm_107",
+    "title": "Affiche vert",
+    "author": "Studio Retro",
+    "tags": [
+      "affiche",
+      "vert",
+      "abstrait"
+    ],
+    "colors": [
+      "#008000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/vertitm_107/600/800",
+    "createdAt": "2025-04-18T09:00:00Z",
+    "updatedAt": "2025-04-18T09:00:00Z"
+  },
+  {
+    "id": "itm_108",
+    "title": "Poster violet",
+    "author": "Ligne Claire",
+    "tags": [
+      "affiche",
+      "violet",
+      "logo"
+    ],
+    "colors": [
+      "#9b59b6"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/violetitm_108/600/800",
+    "createdAt": "2025-04-19T09:00:00Z",
+    "updatedAt": "2025-04-19T09:00:00Z"
+  },
+  {
+    "id": "itm_109",
+    "title": "Couverture blanc",
+    "author": "Atelier Serein",
+    "tags": [
+      "magazine",
+      "couverture",
+      "blanc"
+    ],
+    "colors": [
+      "#ffffff"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/blancitm_109/600/800",
+    "createdAt": "2025-04-20T09:00:00Z",
+    "updatedAt": "2025-04-20T09:00:00Z"
+  },
+  {
+    "id": "itm_110",
+    "title": "Identité noir",
+    "author": "Plan Studio",
+    "tags": [
+      "identité",
+      "logo",
+      "noir",
+      "UI"
+    ],
+    "colors": [
+      "#000000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/noiritm_110/600/800",
+    "createdAt": "2025-04-21T09:00:00Z",
+    "updatedAt": "2025-04-21T09:00:00Z"
+  },
+  {
+    "id": "itm_111",
+    "title": "Affiche rouge",
+    "author": "Dual Studio",
+    "tags": [
+      "affiche",
+      "rouge",
+      "magazine"
+    ],
+    "colors": [
+      "#cc0000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/rougeitm_111/600/800",
+    "createdAt": "2025-04-22T09:00:00Z",
+    "updatedAt": "2025-04-22T09:00:00Z"
+  },
+  {
+    "id": "itm_112",
+    "title": "Poster jaune",
+    "author": "Florae",
+    "tags": [
+      "affiche",
+      "jaune",
+      "événement"
+    ],
+    "colors": [
+      "#f7d02e"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/jauneitm_112/600/800",
+    "createdAt": "2025-04-23T09:00:00Z",
+    "updatedAt": "2025-04-23T09:00:00Z"
+  },
+  {
+    "id": "itm_113",
+    "title": "Couverture orange",
+    "author": "Linea Sud",
+    "tags": [
+      "magazine",
+      "couverture",
+      "orange"
+    ],
+    "colors": [
+      "#e67e22"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/orangeitm_113/600/800",
+    "createdAt": "2025-04-24T09:00:00Z",
+    "updatedAt": "2025-04-24T09:00:00Z"
+  },
+  {
+    "id": "itm_114",
+    "title": "Identité bleu",
+    "author": "Studio Nord",
+    "tags": [
+      "identité",
+      "logo",
+      "bleu"
+    ],
+    "colors": [
+      "#000080"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/bleuitm_114/600/800",
+    "createdAt": "2025-04-25T09:00:00Z",
+    "updatedAt": "2025-04-25T09:00:00Z"
+  },
+  {
+    "id": "itm_115",
+    "title": "Affiche vert",
+    "author": "Atelier Nord",
+    "tags": [
+      "affiche",
+      "vert",
+      "culture",
+      "identité"
+    ],
+    "colors": [
+      "#008000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/vertitm_115/600/800",
+    "createdAt": "2025-04-26T09:00:00Z",
+    "updatedAt": "2025-04-26T09:00:00Z"
+  },
+  {
+    "id": "itm_116",
+    "title": "Poster violet",
+    "author": "Studio 42",
+    "tags": [
+      "affiche",
+      "violet",
+      "illustration",
+      "architecture"
+    ],
+    "colors": [
+      "#9b59b6"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/violetitm_116/600/800",
+    "createdAt": "2025-04-27T09:00:00Z",
+    "updatedAt": "2025-04-27T09:00:00Z"
+  },
+  {
+    "id": "itm_117",
+    "title": "Couverture blanc",
+    "author": "Collectif Bleu",
+    "tags": [
+      "magazine",
+      "couverture",
+      "blanc"
+    ],
+    "colors": [
+      "#ffffff"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/blancitm_117/600/800",
+    "createdAt": "2025-04-28T09:00:00Z",
+    "updatedAt": "2025-04-28T09:00:00Z"
+  },
+  {
+    "id": "itm_118",
+    "title": "Identité noir",
+    "author": "Linea Studio",
+    "tags": [
+      "identité",
+      "logo",
+      "noir",
+      "signalétique"
+    ],
+    "colors": [
+      "#000000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/noiritm_118/600/800",
+    "createdAt": "2025-04-29T09:00:00Z",
+    "updatedAt": "2025-04-29T09:00:00Z"
+  },
+  {
+    "id": "itm_119",
+    "title": "Affiche rouge",
+    "author": "Studio Verde",
+    "tags": [
+      "affiche",
+      "rouge",
+      "abstrait"
+    ],
+    "colors": [
+      "#cc0000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/rougeitm_119/600/800",
+    "createdAt": "2025-04-30T09:00:00Z",
+    "updatedAt": "2025-04-30T09:00:00Z"
+  },
+  {
+    "id": "itm_120",
+    "title": "Poster jaune",
+    "author": "Noir Studio",
+    "tags": [
+      "affiche",
+      "jaune",
+      "abstrait",
+      "logo"
+    ],
+    "colors": [
+      "#f7d02e"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/jauneitm_120/600/800",
+    "createdAt": "2025-05-01T09:00:00Z",
+    "updatedAt": "2025-05-01T09:00:00Z"
+  },
+  {
+    "id": "itm_121",
+    "title": "Couverture orange",
+    "author": "Atelier Blanc",
+    "tags": [
+      "magazine",
+      "couverture",
+      "orange"
+    ],
+    "colors": [
+      "#e67e22"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/orangeitm_121/600/800",
+    "createdAt": "2025-05-02T09:00:00Z",
+    "updatedAt": "2025-05-02T09:00:00Z"
+  },
+  {
+    "id": "itm_122",
+    "title": "Identité bleu",
+    "author": "SportLab",
+    "tags": [
+      "identité",
+      "logo",
+      "bleu",
+      "architecture"
+    ],
+    "colors": [
+      "#000080"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/bleuitm_122/600/800",
+    "createdAt": "2025-05-03T09:00:00Z",
+    "updatedAt": "2025-05-03T09:00:00Z"
+  },
+  {
+    "id": "itm_123",
+    "title": "Affiche vert",
+    "author": "Mira Soto",
+    "tags": [
+      "affiche",
+      "vert",
+      "poster",
+      "architecture"
+    ],
+    "colors": [
+      "#008000"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/vertitm_123/600/800",
+    "createdAt": "2025-05-04T09:00:00Z",
+    "updatedAt": "2025-05-04T09:00:00Z"
+  },
+  {
+    "id": "itm_124",
+    "title": "Poster violet",
+    "author": "Kinetik",
+    "tags": [
+      "affiche",
+      "violet",
+      "culture",
+      "poster"
+    ],
+    "colors": [
+      "#9b59b6"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/violetitm_124/600/800",
+    "createdAt": "2025-05-05T09:00:00Z",
+    "updatedAt": "2025-05-05T09:00:00Z"
+  },
+  {
+    "id": "itm_125",
+    "title": "Couverture blanc",
+    "author": "Atelier Rouge",
+    "tags": [
+      "magazine",
+      "couverture",
+      "blanc",
+      "édition"
+    ],
+    "colors": [
+      "#ffffff"
+    ],
+    "sourceUrl": "https://picsum.photos/",
+    "imageUrl": "https://picsum.photos/seed/blancitm_125/600/800",
+    "createdAt": "2025-05-06T09:00:00Z",
+    "updatedAt": "2025-05-06T09:00:00Z"
   }
 ]

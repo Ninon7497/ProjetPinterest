@@ -46,8 +46,7 @@ function normalizeItemPayload(body, partial = false) {
 
 /**
  * GET /api/items
- * Recherche (q), filtres (tags/couleurs), tri (createdAt desc), pagination
- * Réponse: { data, page, limit, total }
+ * Recherche (q), filtres (tags/couleurs), tri, pagination
  */
 app.get(
   "/api/items",
@@ -147,7 +146,7 @@ app.post(
         createdAt: nowISO(),
         updatedAt: nowISO(),
       };
-      await DB.enqueueWrite(async (current) => [item, ...current]); // insertion en tête
+      await DB.enqueueWrite(async (current) => [item, ...current]); 
       res.status(201).json(item);
     } catch (err) {
       console.error(err);
@@ -156,7 +155,6 @@ app.post(
   }
 );
 
-/** PUT /api/items/:id (update partiel, remplace tags/colors si fournis) */
 app.put(
   "/api/items/:id",
   [
@@ -178,19 +176,16 @@ app.put(
   async (req, res) => {
     try {
       const updates = normalizeItemPayload(req.body, true);
-
       let result = null;
+
       await DB.enqueueWrite(async (current) => {
         const idx = current.findIndex((i) => i.id === req.params.id);
         if (idx === -1) return current;
 
         const next = [...current];
         const merged = { ...next[idx], ...updates, updatedAt: nowISO() };
-
-        // Si tags / colors sont fournis, on remplace totalement
         if (updates.tags !== undefined) merged.tags = updates.tags;
         if (updates.colors !== undefined) merged.colors = updates.colors.map((c) => c.toLowerCase());
-
         next[idx] = merged;
         result = merged;
         return next;
@@ -205,7 +200,6 @@ app.put(
   }
 );
 
-/** DELETE /api/items/:id */
 app.delete(
   "/api/items/:id",
   [param("id").isString().notEmpty()],
@@ -229,6 +223,92 @@ app.delete(
     }
   }
 );
+
+
+function aggregateTags(items, { withCounts = false } = {}) {
+  const seen = new Map();
+  for (const it of items) {
+    for (const raw of (it.tags || [])) {
+      const label = String(raw || "").trim();
+      if (!label) continue;
+      const key = label.toLowerCase();
+      if (!seen.has(key)) seen.set(key, { label, count: 0 });
+      seen.get(key).count += 1;
+    }
+  }
+  const arr = [...seen.values()].sort((a, b) =>
+    a.label.localeCompare(b.label, "fr", { sensitivity: "base" })
+  );
+  return withCounts ? arr.map(t => ({ tag: t.label, count: t.count })) : arr.map(t => t.label);
+}
+
+function aggregateColors(items, { withCounts = false } = {}) {
+  const counts = new Map();
+  for (const it of items) {
+    for (const c of (it.colors || [])) {
+      const hex = String(c || "").toLowerCase();
+      if (!hex) continue;
+      counts.set(hex, (counts.get(hex) || 0) + 1);
+    }
+  }
+  const arr = [...counts.entries()]
+    .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  return withCounts ? arr.map(([colorHex, count]) => ({ colorHex, count })) : arr.map(([hex]) => hex);
+}
+
+app.get(
+  "/api/tags",
+  [
+    query("counts").optional().isInt({ min: 0, max: 1 }),
+    query("minCount").optional().isInt({ min: 1 }),
+    query("limit").optional().isInt({ min: 1, max: 500 }),
+  ],
+  validateRequest,
+  async (req, res) => {
+    try {
+      const withCounts = String(req.query.counts || "0") === "1";
+      const minCount = parseInt(String(req.query.minCount || "1"), 10);
+      const limit = parseInt(String(req.query.limit || "500"), 10);
+
+      const all = await DB.all();
+      let data = aggregateTags(all, { withCounts });
+
+      if (withCounts) {
+        data = data.filter(t => t.count >= minCount).slice(0, limit);
+      } else {
+        data = data.slice(0, limit);
+      }
+
+      res.json({ data, total: data.length });
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ error: "failed to aggregate tags" });
+    }
+  }
+);
+
+app.get(
+  "/api/colors",
+  [
+    query("counts").optional().isInt({ min: 0, max: 1 }),
+    query("limit").optional().isInt({ min: 1, max: 500 }),
+  ],
+  validateRequest,
+  async (req, res) => {
+    try {
+      const withCounts = String(req.query.counts || "0") === "1";
+      const limit = parseInt(String(req.query.limit || "500"), 10);
+      const all = await DB.all();
+      let data = aggregateColors(all, { withCounts });
+      data = data.slice(0, limit);
+      res.json({ data, total: data.length });
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ error: "failed to aggregate colors" });
+    }
+  }
+);
+
 
 app.listen(3000, () => {
   console.log("✅ API en ligne sur http://localhost:3000");
