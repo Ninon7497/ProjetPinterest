@@ -1,34 +1,38 @@
 <template>
-    <div class="grille-container">
-        <div v-for="(item, index) in items" :key="item.id" class="grille-item" @click="openPopup(item)"
-            :style="getItemStyle(index)">
-            <div class="item-card">
-                <img :src="item.image" :alt="item.titre" />
-                <!-- <h3>{{ item.titre }}</h3>
+    <div class="loading-scroll" @scroll="handleScroll">
+        <div class="grille-container">
+
+            <div v-for="(item, index) in items" :key="item.id" class="grille-item" @click="openPopup(item)"
+                :style="getItemStyle(index)">
+                <div class="item-card">
+                    <img :src="item.image" :alt="item.titre" />
+                    <!-- <h3>{{ item.titre }}</h3>
         <p>{{ item.auteur }}</p>
         <div class="tags">
           <span v-for="tag in item.tags" :key="tag" class="tag">#{{ tag }}</span>
         </div> -->
+                </div>
             </div>
+
+            <AfficheItem v-if="selectedItem" :item="selectedItem" @close="selectedItem = null" />
+
+            <p v-if="loading" class="no-items">Chargement…</p>
+            <p v-if="!loading && !items.length" class="no-items">Aucune affiche trouvée.</p>
+
+            <!-- <div class="util-flex gap-2">
+                <button class="btn--ghost" :disabled="page === 1" @click="changePage(page - 1)"><img
+                        src="../images/previous.svg"></img> </button>
+                <span class="card__meta" style="color: white;">Page {{ page }} / {{ totalPages }}</span>
+                <button class="btn--ghost" :disabled="page * limit >= total" @click="changePage(page + 1)"><img
+                        src="../images/next.svg"></img> </button>
+            </div> -->
         </div>
 
-        <AfficheItem v-if="selectedItem" :item="selectedItem" @close="selectedItem = null" />
-
-        <p v-if="!loading && !items.length" class="no-items">Aucune affiche trouvée.</p>
-        <p v-if="loading" class="no-items">Chargement…</p>
-
-        <div class="util-flex gap-2">
-            <button class="btn--ghost" :disabled="page === 1" @click="changePage(page - 1)"><img
-                    src="../images/previous.svg"></img> </button>
-            <span class="card__meta" style="color: white;">Page {{ page }} / {{ totalPages }}</span>
-            <button class="btn--ghost" :disabled="page * limit >= total" @click="changePage(page + 1)"><img
-                    src="../images/next.svg"></img> </button>
-        </div>
     </div>
 </template>
 
 <script>
-import { computed } from "vue";
+// import { computed } from "vue";
 import AfficheItem from "./AfficheItem.vue";
 
 const API = import.meta.env?.VITE_API_URL || "http://localhost:3000/api";
@@ -73,35 +77,53 @@ export default {
             this.fetchItems();
         },
 
-        async fetchItems() {
+        async fetchItems(append = false) {
             this.loading = true;
+
             try {
                 const params = new URLSearchParams();
                 if (this.filters?.search) params.set("q", this.filters.search);
                 if (this.filters?.tag) params.set("tags", this.filters.tag);
                 if (this.filters?.colorHex) params.set("colors", this.filters.colorHex);
-
                 params.set("page", String(this.page));
                 params.set("limit", String(this.limit));
 
                 const res = await fetch(`${API}/items?${params.toString()}`);
                 const json = await res.json();
-                this.items = (json.data || []).map(i => ({
-                    id: i.id,
+                const newItems = (json.data || []).map(i => ({
                     titre: i.title,
                     auteur: i.author || "",
                     image: i.imageUrl,
                     tags: i.tags || [],
                     couleurHex: (i.colors || [])[0] || null
                 }));
+                if (append) {
+                    this.items.push(...newItems)
+
+                } else {
+                    this.items = newItems
+                }
+
                 this.total = json.total || this.items.length;
-            } catch (e) {
+            } catch (error) {
                 console.error("Erreur lors du chargement des affiches :", error);
                 this.items = [];
                 this.total = 0;
             } finally {
                 this.loading = false;
             }
+        },
+        handleScroll(event) {
+            const el = event.target;
+            if (this.loading) return;
+            const nearBottom = el.scrollTop + el.clientHeight >= el.scrollHeight - 100;
+            const hasMore = this.page * this.limit < this.total;
+
+            if (nearBottom && hasMore) {
+                this.page++;
+                this.fetchItems(true);
+            }
+
         },
         getItemStyle(index) {
             const offset = (index % 5) * 2;
@@ -155,8 +177,8 @@ export default {
 }
 
 .btn--ghost img {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
 }
 
 .btn--ghost:hover {
@@ -205,5 +227,9 @@ export default {
     text-align: center;
     color: #888;
     margin-top: 40px;
+}
+
+.loading-scroll {
+    overflow-y: auto;
 }
 </style>

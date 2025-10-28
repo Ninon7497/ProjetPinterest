@@ -1,7 +1,7 @@
 <template>
     <div class="Header">
-        <p class="logo">Logo</p>
-        <SearchBar class="search" @searchChanged="handleSearchChanged" />
+
+        <SearchBar id="Header__center" class="search" @searchChanged="handleSearchChanged" />
 
         <img class="create_logo" src="../images/create.svg" @click="showCreate = true"></img>
 
@@ -43,13 +43,19 @@ export default {
     padding: 1rem;
 }
 
+#Header__center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
 .logo {
     color: yellowgreen;
     font-weight: bold;
 }
 
 .create_logo {
-    width: 60px;
+    width: 40px;
     opacity: 0.9;
     transition: 0.3s;
     cursor: pointer;

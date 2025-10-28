@@ -1,25 +1,5 @@
 <template>
   <div class="filters-container">
-    <p>Choisis un filtre :</p>
-
-    <div class="tag-list">
-      <button
-        class="btn-color"
-        :class="{ active: localTag === '' }"
-        @click="selectTag('')"
-      >Tous</button>
-
-      <button
-        class="btn-color"
-        v-for="tag in displayTags"
-        :key="tag"
-        :class="{ active: tag === localTag }"
-        @click="selectTag(tag)"
-      >
-        {{ tag }}
-      </button>
-    </div>
-
     <p>Choisis une couleur :</p>
 
     <div class="color-list">
@@ -27,14 +7,8 @@
         <span class="color-label">Toutes</span>
       </div>
 
-      <div
-        v-for="c in colors"
-        :key="c.name"
-        class="color-wrapper"
-        :class="{ active: localColorName === c.name }"
-        @click="selectColor(c.name)"
-        :title="`${c.name} (${c.hex})`"
-      >
+      <div v-for="c in colors" :key="c.name" class="color-wrapper" :class="{ active: localColorName === c.name }"
+        @click="selectColor(c.name)" :title="`${c.name} (${c.hex})`">
         <div class="color-circle" :style="{ backgroundColor: c.hex }"></div>
       </div>
     </div>
@@ -42,8 +16,11 @@
 </template>
 
 <script>
+import Tags from './AfficheTag.vue';
+
 export default {
   name: "Filters",
+  components: { Tags },
   props: {
     modelTag: { type: String, default: "" },
     modelColorHex: { type: String, default: "" },
@@ -55,16 +32,15 @@ export default {
       localTag: "",
       localColorName: "",
       localHex: "",
-      fetchedTags: [],
       colors: [
-        { name: "rouge",  hex: "#cc0000" },
-        { name: "jaune",  hex: "#f7d02e" },
+        { name: "rouge", hex: "#cc0000" },
+        { name: "jaune", hex: "#f7d02e" },
         { name: "orange", hex: "#e67e22" },
-        { name: "bleu",   hex: "#000080" },
-        { name: "vert",   hex: "#008000" },
+        { name: "bleu", hex: "#000080" },
+        { name: "vert", hex: "#008000" },
         { name: "violet", hex: "#9b59b6" },
-        { name: "blanc",  hex: "#ffffff" },
-        { name: "noir",   hex: "#000000" }
+        { name: "blanc", hex: "#ffffff" },
+        { name: "noir", hex: "#000000" }
       ]
     };
   },
@@ -73,34 +49,6 @@ export default {
       const m = new Map();
       this.colors.forEach(c => m.set(c.name, c.hex.toLowerCase()));
       return m;
-    },
-    displayTags() {
-      const raw = (this.availableTags && this.availableTags.length)
-        ? this.availableTags
-        : this.fetchedTags;
-
-      const seen = new Set();
-      return (raw || [])
-        .map(t => String(t || "").trim())
-        .filter(Boolean)
-        .filter(t => {
-          const key = t.toLowerCase();
-          if (seen.has(key)) return false;
-          seen.add(key);
-          return true;
-        })
-        .sort((a, b) => a.localeCompare(b, "fr", { sensitivity: "base" }));
-    }
-  },
-  async mounted() {
-    if (!this.availableTags || this.availableTags.length === 0) {
-      try {
-        const res = await fetch(this.tagsEndpoint, { headers: { "Accept": "application/json" } });
-        const data = await res.json();
-        this.fetchedTags = Array.isArray(data.data) ? data.data : [];
-      } catch (e) {
-        console.error("Impossible de charger les tags:", e);
-      }
     }
   },
   methods: {
@@ -144,29 +92,13 @@ export default {
   background: #fff;
   border-radius: 8px;
 }
-.tag-list {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
-}
+
 .color-list {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
   align-items: center;
 }
-
-.btn-color {
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  background: #f4f4f4;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-button:hover { background-color: #ddd; }
-button.active { background-color: #81bb79; color: white; border-color: #5e995c; }
 
 .color-wrapper {
   width: 32px;
@@ -178,13 +110,18 @@ button.active { background-color: #81bb79; color: white; border-color: #5e995c; 
   justify-content: center;
   align-items: center;
 }
-.color-wrapper.active { border-color: #333; }
+
+.color-wrapper.active {
+  border-color: #333;
+}
+
 .color-circle {
   width: 20px;
   height: 20px;
   border-radius: 50%;
   border: 1px solid #aaa;
 }
+
 .color-label {
   font-size: 10px;
   color: #555;

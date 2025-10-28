@@ -3,19 +3,19 @@
   <Header @searchChanged="onSearchChanged" />
 
   <div class="app-container">
-    <!-- Bouton filtre -->
-    <button class="btn-filters" @click="toggleFilters" title="Filtres">
-      <img src="/src/images/filters_menu.svg" alt="Filtres" />
-    </button>
 
+    <div class="filters-tags">
+      <!-- Bouton filtre -->
+      <button class="btn-filters" @click="toggleFilters" title="Filtres">
+        <img src="/src/images/filters_menu.svg" alt="Filtres" />
+      </button>
+
+      <!-- Tags -->
+      <Tags v-model:modelTag="filters.tag" :availableTags="availableTags" @tagSelected="onTagSelected" />
+    </div>
     <!-- Filtres -->
-    <Filters
-      v-if="showFilters"
-      :availableTags="availableTags"
-      :modelTag="filters.tag"
-      :modelColorHex="filters.colorHex"
-      @filtersChanged="onFiltersChanged"
-    />
+    <Filters v-if="showFilters" :availableTags="availableTags" :modelTag="filters.tag" :modelColorHex="filters.colorHex"
+      @filtersChanged="onFiltersChanged" />
   </div>
 
   <!-- Grille des images filtrées -->
@@ -26,6 +26,7 @@
 import Header from './components/Headers.vue'
 import Filters from './components/Filters.vue'
 import Grille from './components/GrilleMasonry.vue'
+import Tags from './components/AfficheTag.vue';
 
 const API = import.meta.env.VITE_API_URL || "http://localhost:3000/api";
 
@@ -34,6 +35,7 @@ export default {
   components: {
     Header,
     Filters,
+    Tags,
     Grille
   },
   data() {
@@ -93,6 +95,12 @@ body {
   padding: 1rem;
 }
 
+.filters-tags {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .btn-filters {
   background-color: transparent;
   border: none;
@@ -100,9 +108,10 @@ body {
   cursor: pointer;
   opacity: 0.8;
   transition: 0.5s;
+
 }
 
-button:hover {
+.btn-filters:hover {
   opacity: 1;
 }
 </style>
