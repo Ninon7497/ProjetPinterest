@@ -3,21 +3,28 @@
     <div class="popup">
       <button class="close-btn" @click="close">✕</button>
 
-      <!-- Mode affichage -->
       <div v-if="!editMode" class="view-mode">
         <img :src="img" :alt="title" class="affiche-img" />
-        <br></br>
+        <br />
         <h2>{{ title }}</h2>
         <p><strong>Auteur :</strong> {{ author || "—" }}</p>
-        <!-- Bouton source -->
-        <button class="btn_source"><a href=""></a>Sources</button>
+
+        <a
+          class="btn_source"
+          :title="hasSource ? safeSourceUrl : 'Aucune source'"
+          :href="safeSourceUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          @click.prevent.stop="openSource"
+        >
+          Voir la source
+        </a>
+
         <div class="tags" v-if="tags?.length">
           <span v-for="tag in tags" :key="tag" class="tag">#{{ tag }}</span>
         </div>
       </div>
 
-
-      <!-- Boutons modifier / supprimer -->
       <div v-if="!editMode" class="logo">
         <button class="icon-btn delete_logo" @click="deleteItem" title="Supprimer">
           <img src="../images/delete.svg" alt="Supprimer" />
@@ -27,7 +34,6 @@
         </button>
       </div>
 
-      <!-- Mode édition -->
       <form v-if="editMode" class="form" @submit.prevent="saveUpdate">
         <h2>Modifier l’item</h2>
 
@@ -41,13 +47,10 @@
           <input v-model.trim="form.author" type="text" />
         </label>
 
-        <!-- Tags -->
         <label style="font-weight: bold; font-size: large;">
           Tags (séparés par des virgules)
           <input v-model="form.tagsText" type="text" placeholder="affiche, illustration" />
         </label>
-
-        <!-- URL image, URL source et couleurs supprimés -->
 
         <div class="form-actions">
           <button type="button" class="btn ghost" @click="toggleEdit">Annuler</button>
@@ -86,7 +89,18 @@ export default {
     author() { return this.item.author ?? this.item.auteur ?? ""; },
     img() { return this.item.imageUrl ?? this.item.image ?? ""; },
     tags() { return this.item.tags ?? []; },
-    colors() { return this.item.colors ?? []; }
+
+    sourceUrlRaw() {
+      return this.item.sourceUrl ?? this.item.source ?? this.item.url ?? "";
+    },
+    hasSource() {
+      return String(this.sourceUrlRaw || "").trim().length > 0;
+    },
+    safeSourceUrl() {
+      const raw = String(this.sourceUrlRaw || "").trim();
+      if (!raw) return "#";
+      return /^https?:\/\//i.test(raw) ? raw : `https://${raw}`;
+    }
   },
 
   methods: {
@@ -154,6 +168,15 @@ export default {
         console.error(e);
         this.errorMsg = "Erreur réseau lors de la mise à jour";
       }
+    },
+
+    openSource() {
+      if (!this.hasSource) return;
+      try {
+        window.open(this.safeSourceUrl, "_blank", "noopener");
+      } catch {
+        location.href = this.safeSourceUrl;
+      }
     }
   }
 };
@@ -198,27 +221,27 @@ export default {
   cursor: pointer;
 }
 
+/* Lien "Voir la source" */
 .btn_source {
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
+  margin-top: 10px;
   border-radius: 20px;
   border: none;
-  padding: 10px;
+  padding: 10px 16px;
   background-color: #81BB79;
   color: white;
+  font-weight: 600;
+  text-decoration: none;
   cursor: pointer;
-  opacity: 0.9;
+  opacity: 0.95;
   transition: 0.3s;
 }
-
 .btn_source:hover {
   opacity: 1;
+  transform: scale(1.03);
 }
 
-.tags {
-  margin-top: 10px;
-}
-
+.tags { margin-top: 10px; }
 .tag {
   background-color: #eee;
   padding: 4px 8px;
@@ -245,20 +268,9 @@ export default {
   align-items: center;
   opacity: 0.75;
   transition: 0.2s;
-
 }
-
-.icon-btn img {
-  width: 30px;
-  height: 30px;
-  display: flex;
-}
-
-.icon-btn:hover {
-  opacity: 1;
-  transform: scale(1.05);
-  cursor: pointer;
-}
+.icon-btn img { width: 30px; height: 30px; display: flex; }
+.icon-btn:hover { opacity: 1; transform: scale(1.05); cursor: pointer; }
 
 .form {
   text-align: left;
@@ -266,70 +278,22 @@ export default {
   display: grid;
   gap: 8px;
 }
-
-.form h2 {
-  margin-bottom: 6px;
-  text-align: center;
-}
-
-.form label {
-  display: grid;
-  gap: 4px;
-  font-size: 13px;
-}
-
-.form input {
-  padding: 7px 9px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-}
+.form h2 { margin-bottom: 6px; text-align: center; }
+.form label { display: grid; gap: 4px; font-size: 13px; }
+.form input { padding: 7px 9px; border: 1px solid #ddd; border-radius: 6px; }
 
 .form-actions {
-  display: flex;
-  justify-content: flex-end;
-  gap: 8px;
-  margin-top: 6px;
+  display: flex; justify-content: flex-end; gap: 8px; margin-top: 6px;
 }
 
-.btn {
-  padding: 7px 10px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  cursor: pointer;
-}
-
+.btn { padding: 7px 10px; border-radius: 6px; border: 1px solid #ccc; cursor: pointer; }
 .btn.primary {
-
-  border-radius: 20px;
-  border: none;
-  background-color: #81BB79;
-  min-width: 110px;
-  padding: 10px;
-  color: white;
-  opacity: 0.9;
-  transition: 0.2s;
-  cursor: pointer;
+  border-radius: 20px; border: none; background-color: #81BB79;
+  min-width: 110px; padding: 10px; color: white; opacity: 0.9; transition: 0.2s;
 }
+.btn.primary:hover { opacity: 1; }
+.btn.ghost { background: transparent; border-radius: 20px; color: #333; border: 1px solid #ccc; transition: 0.2s; }
+.btn.ghost:hover { border-color: black; }
 
-.btn.btn.primary:hover {
-  opacity: 1;
-}
-
-.btn.ghost {
-  background: transparent;
-  border-radius: 20px;
-  color: #333;
-  border: 1px solid #ccc;
-  transition: 0.6s;
-}
-
-.btn.ghost:hover {
-  border-color: black;
-}
-
-.error {
-  color: #b00020;
-  font-size: 12px;
-  text-align: center;
-}
+.error { color: #b00020; font-size: 12px; text-align: center; }
 </style>
