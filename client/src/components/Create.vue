@@ -39,13 +39,35 @@
 
         <div>
           <label for="url">Lien URL de votre image :</label><br>
-          <input
-            id="url"
-            v-model.trim="url"
-            type="url"
-            placeholder="https://exemple.com/mon-image.jpg"
-            required
-          />
+          <div class="url-with-preview">
+            <input
+              id="url"
+              v-model.trim="url"
+              type="url"
+              placeholder="https://exemple.com/mon-image.jpg"
+              @input="onUrlInput"
+              aria-describedby="url-help"
+              required
+            />
+            <div class="thumb">
+              <div v-if="!validUrl" class="thumb-placeholder">Aperçu</div>
+
+              <div v-else class="thumb-box">
+                <img
+                  v-show="previewStatus === 'ok'"
+                  :src="previewSrc"
+                  decoding="async"
+                  referrerpolicy="no-referrer"
+                  alt="Aperçu"
+                  @load="onImgLoad"
+                  @error="onImgError"
+                />
+                <div v-if="previewStatus === 'loading'" class="thumb-loading" aria-label="Chargement…">Chargement…</div>
+                <div v-if="previewStatus === 'error'" class="thumb-error" aria-live="polite">Erreur</div>
+              </div>
+            </div>
+          </div>
+          <small id="url-help" class="help">Un aperçu s’affiche automatiquement si l’URL est valide et accessible.</small>
         </div>
 
         <div>
@@ -72,7 +94,7 @@
 </template>
 
 <script>
-const API = import.meta.env.VITE_API_URL || "http://localhost:3000/api";
+const API = import.meta.env.VITE_API_URL || "http://localhost:3000/api"
 
 export default {
   emits: ["close", "created"],
@@ -95,41 +117,80 @@ export default {
       url: "",
       sourceUrl: "",
       submitting: false,
-      errorMsg: ""
-    };
+      errorMsg: "",
+
+      previewSrc: "",
+      previewStatus: "idle", 
+      debounceTimer: null
+    }
   },
   computed: {
     colorMap() {
-      const m = new Map();
-      this.colors.forEach(c => m.set(c.name, c.hex.toLowerCase()));
-      return m;
+      const m = new Map()
+      this.colors.forEach(c => m.set(c.name, c.hex.toLowerCase()))
+      return m
     },
     selectedHex() {
-      return this.localColor ? (this.colorMap.get(this.localColor) || "") : "";
+      return this.localColor ? (this.colorMap.get(this.localColor) || "") : ""
+    },
+    validUrl() {
+      return /^https?:\/\/.+/i.test(this.url)
+    }
+  },
+  watch: {
+    url(newVal) {
+      if (!this.validUrl) {
+        this.previewSrc = ""
+        this.previewStatus = "idle"
+        return
+      }
+      this.queuePreviewUpdate(newVal)
     }
   },
   methods: {
     selectColor(colorName) {
-      this.localColor = colorName;
+      this.localColor = colorName
+    },
+
+    onUrlInput() {
+      if (!this.validUrl) {
+        this.previewStatus = "idle"
+      }
+    },
+
+    queuePreviewUpdate(src) {
+      clearTimeout(this.debounceTimer)
+      this.debounceTimer = setTimeout(() => {
+        this.previewStatus = "loading"
+        this.previewSrc = src
+      }, 250)
+    },
+
+    onImgLoad() {
+      this.previewStatus = "ok"
+    },
+
+    onImgError() {
+      this.previewStatus = "error"
     },
 
     async submitForm() {
-      this.errorMsg = "";
+      this.errorMsg = ""
 
       if (!this.title.trim()) {
-        this.errorMsg = "Le titre est obligatoire.";
-        return;
+        this.errorMsg = "Le titre est obligatoire."
+        return
       }
 
-      const urlRe = /^https?:\/\/.+/i;
+      const urlRe = /^https?:\/\/.+/i
       if (!urlRe.test(this.url)) {
-        this.errorMsg = "L’URL de l’image doit commencer par http(s)://";
-        return;
+        this.errorMsg = "L’URL de l’image doit commencer par http(s)://"
+        return
       }
 
       if (this.sourceUrl && !urlRe.test(this.sourceUrl)) {
-        this.errorMsg = "L’URL de la source doit être valide (http ou https).";
-        return;
+        this.errorMsg = "L’URL de la source doit être valide (http ou https)."
+        return
       }
 
       const payload = {
@@ -142,43 +203,46 @@ export default {
           .map(t => t.trim())
           .filter(t => t.length > 0),
         colors: this.selectedHex ? [this.selectedHex] : []
-      };
+      }
 
-      this.submitting = true;
+      this.submitting = true
 
       try {
         const res = await fetch(`${API}/items`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload)
-        });
+        })
 
         if (!res.ok) {
-          const err = await res.json().catch(() => ({}));
-          this.errorMsg = err?.details?.[0]?.msg || err.error || res.statusText;
-          return;
+          const err = await res.json().catch(() => ({}))
+          this.errorMsg = err?.details?.[0]?.msg || err.error || res.statusText
+          return
         }
 
-        const created = await res.json();
-        this.$emit("created", created);
+        const created = await res.json()
+        this.$emit("created", created)
 
-        this.title = "";
-        this.author = "";
-        this.tags = "";
-        this.localColor = "";
-        this.url = "";
-        this.sourceUrl = "";
+        this.title = ""
+        this.author = ""
+        this.tags = ""
+        this.localColor = ""
+        this.url = ""
+        this.sourceUrl = ""
 
-        this.$emit("close");
+        this.previewSrc = ""
+        this.previewStatus = "idle"
+
+        this.$emit("close")
       } catch (e) {
-        console.error(e);
-        this.errorMsg = "Erreur réseau lors de la création.";
+        console.error(e)
+        this.errorMsg = "Erreur réseau lors de la création."
       } finally {
-        this.submitting = false;
+        this.submitting = false
       }
     }
   }
-};
+}
 </script>
 
 <style scoped>
@@ -226,6 +290,47 @@ export default {
   border-radius: 6px;
 }
 
+/* URL + preview */
+.url-with-preview {
+  display: grid;
+  grid-template-columns: 1fr 88px;
+  gap: 10px;
+  align-items: center;
+}
+
+.thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumb-box,
+.thumb-placeholder,
+.thumb-loading,
+.thumb-error {
+  width: 88px;
+  height: 88px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  padding: 2px;
+}
+
+.thumb-placeholder { color: #888; background: #fafafa; }
+.thumb-loading { color: #555; background: #f3f3f3; }
+.thumb-error { color: #b00020; background: #fff3f3; }
+
+.thumb-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .color-list {
   display: flex;
   align-items: center;
@@ -242,9 +347,7 @@ export default {
   align-items: center;
 }
 
-.color-circle.active {
-  border-color: #333;
-}
+.color-circle.active { border-color: #333; }
 
 .color-circle-inner {
   width: 22px;
@@ -276,9 +379,7 @@ export default {
   color: #333;
   border: 1px solid #ccc;
 }
-.submit:hover:not([disabled]) {
-  opacity: 1;
-}
+.submit:hover:not([disabled]) { opacity: 1; }
 .submit[disabled] {
   opacity: 0.6;
   cursor: not-allowed;
@@ -289,5 +390,9 @@ export default {
   font-size: 12px;
   margin-top: -4px;
   margin-bottom: 8px;
+}
+.help {
+  color: #666;
+  font-size: 12px;
 }
 </style>
