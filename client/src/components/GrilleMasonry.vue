@@ -91,6 +91,7 @@ export default {
                 const res = await fetch(`${API}/items?${params.toString()}`);
                 const json = await res.json();
                 const newItems = (json.data || []).map(i => ({
+                    id: i.id ?? i._id ?? null,
                     titre: i.title,
                     auteur: i.author || "",
                     image: i.imageUrl,

@@ -2007,7 +2007,7 @@
   },
   {
     "id": "itm_123",
-    "title": "Affiche vert",
+    "title": "Affiche verte",
     "author": "Mira Soto",
     "tags": [
       "affiche",
@@ -2021,25 +2021,7 @@
     "sourceUrl": "https://picsum.photos/",
     "imageUrl": "https://picsum.photos/seed/vertitm_123/600/800",
     "createdAt": "2025-05-04T09:00:00Z",
-    "updatedAt": "2025-05-04T09:00:00Z"
-  },
-  {
-    "id": "itm_124",
-    "title": "Poster violet",
-    "author": "Kinetik",
-    "tags": [
-      "affiche",
-      "violet",
-      "culture",
-      "poster"
-    ],
-    "colors": [
-      "#9b59b6"
-    ],
-    "sourceUrl": "https://picsum.photos/",
-    "imageUrl": "https://picsum.photos/seed/violetitm_124/600/800",
-    "createdAt": "2025-05-05T09:00:00Z",
-    "updatedAt": "2025-05-05T09:00:00Z"
+    "updatedAt": "2025-10-28T21:46:47.723Z"
   },
   {
     "id": "itm_125",
